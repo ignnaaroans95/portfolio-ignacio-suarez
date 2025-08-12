@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Portafolio-Ignacio Suárez</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:ital,wght@1,100&display=swap"
+        rel="stylesheet">
+
+    <!--Estilos-->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css">
+    <link rel="stylesheet" href="assets/css/scroll.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <script src="assets/js/menu.js" defer></script>
+    <script src="assets/js/portfolio.js"></script>
+</head>
+
+<body>
+
+    <!--Layout principal-->
+
+    <div class="layout">
+
+        <!--Barra lateral (info del usuario)-->
+
+        <aside class="layout__aside">
+
+            <section class="aside__user-info">
+
+                <!--Informacion general del usuario-->
+
+                <div class="user-info__general">
+
+                    <div class="user-info__container-image">
+
+                        <img src="assets/img/fotoigna.jpg" alt="Foto de perfil del usuario" class="user-info__image" width="200.51" height="200.75">
+
+                    </div>
+
+                    <h2 class="user-info__name">Ignacio Suarez</h2>
+
+                    <h4 class="user-info__job">UI . UX | Desarrollador FrontEnd</h4>
+
+
+                </div>
+
+                <!--Menu de navegacion-->
+
+                <nav class="layout__menu">
+
+                    <ul class="menu__list">
+
+                        <li class="menu__option">
+
+                            <a href="index.html" class="menu__link">
+
+                                <i class="fa-solid fa-house menu__icon"></i>
+                                <span class="menu__overlay">Home</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+
+                            <a href="sobre-mi.html" class="menu__link ">
+
+                                <i class="fa-solid fa-user menu__icon"></i>
+                                <span class="menu__overlay">Sobre mí</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+
+                            <a href="curriculum.html" class="menu__link">
+
+                                <i class="fa-solid fa-graduation-cap menu__icon"></i>
+                                <span class="menu__overlay">Curriculum</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+
+                            <a href="portafolio.html" class="menu__link menu__link--active">
+
+                                <i class="fa-solid fa-briefcase menu__icon"></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+
+                            <a href="blog.html" class="menu__link ">
+
+                                <i class="fa-solid fa-book menu__icon"></i>
+                                <span class="menu__overlay">Blog</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+
+                            <a href="contacto.html" class="menu__link">
+
+                                <i class="fa-solid fa-envelope menu__icon"></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+
+
+
+
+                    </ul>
+
+
+
+                </nav>
+
+                <!--Link a  redes sociales-->
+
+                <div class="user-info__links">
+
+                    <ul class="links__social">
+
+                   
+
+                        <li class="social__option">
+
+                            <a href="https://www.linkedin.com/in/ignacio-su%C3%A1rez-ruiz-94105630a/" class="social__link">
+                                <i class="social__icon fa-brands fa-linkedin"></i>
+
+                            </a>
+
+                        </li>
+
+                        <li class="social__option">
+
+                            <a href="https://github.com/ignnaaroans95/ignnaaroans95" class="social__link">
+                                <i class="social__icon fa-brands fa-github"></i>
+
+                            </a>
+
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!--Botón del CV-->
+
+                <div class="user-info__buttons">
+
+                    <a href="assets/cv/CVIgnacioSuarez.pdf" class="user-info__btn" download="CVIgnacioSuarez.pdf">
+  Descargar CV
+</a>
+
+
+
+                </div>
+
+
+
+                <!--Pie de página-->
+
+                <footer class="user-info__footer">
+
+                    &copy; 2025 Ignacio Suarez Ruiz
+
+
+                </footer>
+
+
+
+            </section>
+
+
+
+
+
+        </aside>
+
+        <!--Menu responsive-->
+
+        <div class="layout__menu-toggle">
+
+            <i class="menu-toggle__icon fa-solid fa-bars"></i>
+            <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+            
+            </div>
+            
+
+        <!--Contenido principal--->
+
+        <main class="layout__content">
+
+            <section class="content__page content__portfolio">
+
+                <!--Este contenido cambia en cada pagina del sitio web-->
+
+                <header class="portfolio__header">
+
+
+
+                    <h1 class="portfolio__title">Portafolio</h1>
+
+
+                </header>
+
+                <nav class="portfolio__navbar">
+
+<ul class="portfolio__menu">
+  <li class="portfolio__option portfolio__option--active" data-filter="all">
+    <a href="#" class="portfolio__link">Todo</a>
+  </li>
+  <li class="portfolio__option" data-filter="personal">
+    <a href="#" class="portfolio__link">Proyecto personal</a>
+  </li>
+  <li class="portfolio__option" data-filter="dam">
+    <a href="#" class="portfolio__link">Proyecto DAM</a>
+  </li>
+</ul>
+
+
+
+
+                </nav>
+
+               <section class="portfolio__gallery">
+
+  <!-- Proyecto personal -->
+  <figure class="gallery__item" data-category="personal">
+    <div class="gallery__container-image">
+      <a href="https://workout-project-vn2h.vercel.app/"
+         class="gallery__link" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/banner-enlace.png" class="gallery__image"/> 
+      </a>
+    </div>
+    <figcaption class="gallery__title">Workout Torrelodones</figcaption>
+    <span class="gallery__category">Proyecto personal</span>
+  </figure>
+
+    <!-- Proyecto personal -->
+
+    <figure class="gallery__item" data-category="personal">
+    <div class="gallery__container-image">
+
+        <img src="assets/img/libris.png" class="gallery__image"/> 
+      </a>
+    </div>
+    <figcaption class="gallery__title">Libris.app</figcaption>
+    <span class="gallery__category">Proyecto personal</span>
+  </figure>
+
+  <!-- Proyecto DAM -->
+  <figure class="gallery__item" data-category="dam">
+    <div class="gallery__container-image">
+      <a href="https://github.com/ignnaaroans95/billar3dunity?tab=readme-ov-file"
+         class="gallery__link" target="_blank" rel="noopener noreferrer">
+        <!-- Imagen base -->
+        <img src="assets/img/billard.png" alt="Billard Unity" class="gallery__image" />
+        <!-- Imagen que se muestra al hover -->
+        <img src="assets/img/billard-hover.png" alt="Detalle billar" class="gallery__image--hover" />
+      </a>
+    </div>
+    <figcaption class="gallery__title">Proyecto Billar en Unity</figcaption>
+    <img src="assets/img/unity.svg" alt="Unity" class="gallery__icon">
+    <span class="gallery__category">Proyecto DAM</span>
+  </figure>
+
+  
+
+</section>
+
+<!-- Timeline integrado -->
+<div class="portfolio__timeline">
+  <h2 class="portfolio__timeline-title">Línea temporal · 2025</h2>
+
+  <div class="tl-header">
+    <div class="tl-col-label">Proyecto</div>
+    <div class="tl-months" aria-hidden="true">
+      <span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span>
+      <span>May</span><span>Jun</span><span>Jul</span><span>Ago</span>
+      <span>Sep</span><span>Oct</span><span>Nov</span><span>Dic</span>
+    </div>
+  </div>
+
+  <!-- Workout -->
+  <div class="tl-row" data-start="2025-01" data-end="2025-07">
+    <div class="tl-col-label">
+      <strong>Workout Torrelodones</strong>
+      <div class="tl-meta">Web real · Deploy Vercel</div>
+    </div>
+    <div class="tl-track">
+      <div class="tl-bar" style="--color: var(--bar-a);">
+        <span class="tl-badge tl-badge--progress" data-tooltip="Online, mejoras continuas">
+          ⏳ En producción
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Billar Unity (mayo–junio) -->
+  <div class="tl-row" data-start="2025-05" data-end="2025-06">
+    <div class="tl-col-label">
+      <strong>Proyecto Billar en Unity</strong>
+      <div class="tl-meta">Física · Arte propio</div>
+    </div>
+    <div class="tl-track">
+      <div class="tl-bar" style="--color: var(--bar-b);">
+        <span class="tl-badge tl-badge--done" data-tooltip="MVP jugable completado">
+          ✅ Finalizado
+        </span>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!--Script JS-->
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/timeline.js" defer></script>
+</div>
+
+
+
+
+            </section>
+
+
+            </section>
+
+
+    </div>
+
+
+    </header>
+
+
+
+    </section>
+
+
+
+
+
+    </main>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

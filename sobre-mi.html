@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UACompatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Portafolio-Ignacio Suárez</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:ital,wght@1,100&display=swap"
+        rel="stylesheet">
+
+    <!--Estilos-->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css">
+    <link rel="stylesheet" href="assets/css/scroll.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <script src="assets/js/menu.js" defer></script>
+</head>
+
+<body>
+
+    <!--Layout principal-->
+
+    <div class="layout">
+
+        <!--Barra lateral (info del usuario)-->
+
+        <aside class="layout__aside">
+
+            <section class="aside__user-info">
+
+                <!--Informacion general del usuario-->
+
+                <div class="user-info__general">
+
+                    <div class="user-info__container-image">
+
+                        <img src="assets/img/fotoigna.jpg" alt="Foto de perfil del usuario" class="user-info__image" width="200.51" height="200.75">
+                    </div>
+
+                    <h2 class="user-info__name">Ignacio Suarez</h2>
+
+                    <h4 class="user-info__job">UI . UX | Desarrollador FrontEnd</h4>
+
+
+                </div>
+
+                <!--Menu de navegacion-->
+
+                <nav class="layout__menu">
+
+                    <ul class="menu__list">
+
+                        <li class="menu__option">
+
+                            <a href="index.html" class="menu__link  ">
+
+                                <i class="fa-solid fa-house menu__icon"></i>
+                                <span class="menu__overlay">Home</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+
+                            <a href="sobre-mi.html" class="menu__link menu__link--active">
+
+                                <i class="fa-solid fa-user menu__icon"></i>
+                                <span class="menu__overlay">Sobre mí</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+
+                            <a href="curriculum.html" class="menu__link">
+
+                                <i class="fa-solid fa-graduation-cap menu__icon"></i>
+                                <span class="menu__overlay">Curriculum</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+
+                            <a href="portafolio.html" class="menu__link">
+
+                                <i class="fa-solid fa-briefcase menu__icon"></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+
+                            <a href="blog.html" class="menu__link">
+
+                                <i class="fa-solid fa-book menu__icon"></i>
+                                <span class="menu__overlay">Blog</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+
+                            <a href="contacto.html" class="menu__link">
+
+                                <i class="fa-solid fa-envelope menu__icon"></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+
+
+
+
+                    </ul>
+
+
+
+                </nav>
+
+                <!--Link a  redes sociales-->
+
+                <div class="user-info__links">
+
+                    <ul class="links__social">
+
+                 
+
+                        <li class="social__option">
+
+                            <a href="https://www.linkedin.com/in/ignacio-su%C3%A1rez-ruiz-94105630a/" class="social__link">
+                                <i class="social__icon fa-brands fa-linkedin"></i>
+
+                            </a>
+
+                        </li>
+
+                      
+                        <li class="social__option">
+
+                            <a href="https://github.com/ignnaaroans95/ignnaaroans95" class="social__link">
+                                <i class="social__icon fa-brands fa-github"></i>
+
+                            </a>
+
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!--Botón del CV-->
+
+                <div class="user-info__buttons">
+
+                    <a href="assets/cv/CVIgnacioSuarez.pdf" class="user-info__btn" download="CVIgnacioSuarez.pdf">
+  Descargar CV
+</a>
+
+
+
+                </div>
+
+
+
+                <!--Pie de página-->
+
+                <footer class="user-info__footer">
+
+                    &copy; 2025 Ignacio Suarez Ruiz
+
+
+                </footer>
+
+
+
+            </section>
+
+
+
+
+
+        </aside>
+
+        <!--Menu responsive-->
+
+        <div class="layout__menu-toggle">
+
+            <i class="menu-toggle__icon fa-solid fa-bars"></i>
+            <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+            
+            </div>
+            
+
+        <!--Contenido principal--->
+
+        <main class="layout__content">
+
+            <section class="content__page content__about">
+
+                <!--Este contenido cambia en cada pagina del sitio web-->
+
+                <header class="about__header">
+
+
+
+                    <h2 class="about__title">Sobre <span class="title__color"> Mi</span></h2>
+
+
+                </header>
+                <section class="about__personal-info">
+
+                    <article class="about__personal-info__bio">
+
+
+                        <p class="personal-info__description">Soy una persona profundamente curiosa, y apasionada. Me encanta crear experiencias digitales atractivas (o al menos intentarlo), limpias y, sobre todo, usables para las personas. Me considero proactivo, siempre en búsqueda de mejorar y aprender, tanto en lo personal como en lo profesional.
+                            Amante de los libros y las bicis
+                        </p>
+
+                    </article>
+
+                    <div class="personal-info__data">
+
+                        <ul class="personal-info__list">
+
+                            <li class="personal-info__option">
+
+                                <span class="personal-info__title">Edad</span>
+                                <span class="personal-info__value">30</span>
+                            </li>
+
+                            <li class="personal-info__option">
+
+                                <span class="personal-info__title">País</span>
+                                <span class="personal-info__value">España</span>
+                            </li>
+
+                            <li class="personal-info__option">
+
+                                <span class="personal-info__title">Dirección</span>
+                                <span class="personal-info__value">Calle hermanos velasco López,,
+                                    Torrelodones</span>
+                            </li>
+
+                            <li class="personal-info__option">
+
+                                <span class="personal-info__title">Correo electrónico</span>
+                                1995igna@gmail.com
+                            </li>
+
+                            <li class="personal-info__option">
+
+                                <span class="personal-info__title">Teléfono de contacto</span>
+                                <span class="personal-info__value">684304919</span>
+                            </li>
+
+
+
+
+                        </ul>
+
+
+
+                    </div>
+
+                </section>
+
+                <section class="about__services">
+
+                    <header class="services__header">
+
+                        <h2 class="services__title">Lo que <span class="title__color">hago</span></h3>
+
+
+
+                    </header>
+
+                   <div class="services__container">
+  <!-- 1 · Frontend & Animaciones -->
+  <article class="services__service">
+    <div class="service__icon" aria-hidden="true">
+      <i class="service__real-icon fa-solid fa-code"></i>
+    </div>
+    <div class="service__content">
+      <h3 class="service__title">Frontend & Animaciones</h3>
+      <p class="service__description">
+        Interfaces modernas y responsivas con microinteracciones que suman: HTML, CSS, JS (Vite/React), Framer Motion/GSAP.
+      </p>
+    </div>
+  </article>
+
+  <!-- 2 · UI/UX y Prototipado -->
+  <article class="services__service">
+    <div class="service__icon" aria-hidden="true">
+      <i class="service__real-icon fa-solid fa-pen-ruler"></i>
+    </div>
+    <div class="service__content">
+      <h3 class="service__title">UI/UX y Prototipado</h3>
+      <p class="service__description">
+        Experiencias centradas en el usuario: wireframes, sistemas de diseño, tipografía y coherencia visual en Figma.
+      </p>
+    </div>
+  </article>
+
+<article class="services__service">
+  <div class="service__icon" aria-hidden="true">
+    <i class="service__real-icon fa-solid fa-robot"></i>
+  </div>
+  <div class="service__content">
+    <h3 class="service__title">Integración de APIs e IA</h3>
+    <p class="service__description">
+      Desarrollo proyectos propios donde integro APIs e inteligencia artificial para crear experiencias interactivas y personalizadas.
+      Un ejemplo es <strong>Workout Torrelodones</strong>, mi proyecto personal de entrenamiento con un chatbot diseñado e implementado por mí.
+    </p>
+    <a href="https://workout-project-vn2h.vercel.app/" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="service__logo-link">
+      <img src="assets/img/banner-enlace.png" 
+           alt="Logo Workout Torrelodones" 
+           class="service__logo">
+    </a>
+  </div>
+</article>
+
+
+
+
+
+  <!-- 4 · Deploy y Optimización -->
+  <article class="services__service">
+    <div class="service__icon" aria-hidden="true">
+      <i class="service__real-icon fa-solid fa-rocket"></i>
+    </div>
+    <div class="service__content">
+      <h3 class="service__title">Deploy y Optimización</h3>
+      <p class="service__description">
+        Vercel/Netlify, accesibilidad, SEO técnico y performance. Entrego rápido y medible.
+      </p>
+    </div>
+  </article>
+</div>
+
+
+                </section>
+
+                <section class="about__reviews">
+
+                    <header class="reviews__header">
+
+                        <h2 class="reviews_title">Referencias Laborales</h3>
+
+                            <div class="reviews__container">
+
+                             <article class="reviews__review">
+  <div class="review__image-container">
+    <img src="assets/img/logo-skylink.png" class="review__image" alt="Foto de Erika">
+  </div>
+  <div class="review__description">
+    <p class="review__text">
+      Ignacio demostró una gran capacidad de aprendizaje, adaptándose rápidamente a nuevas tecnologías y metodologías de trabajo.
+      Su proactividad, atención al detalle y actitud positiva han sido clave para el éxito de los proyectos en los que participó.
+      Es un placer recomendarlo.
+    </p>
+  </div>
+  <div class="review__author">
+    <div class="review__author-info">
+      <h4 class="review__author-name">Erika Hernández</h4>
+      <h5 class="review__company">SkyLink Global</h5>
+      <div class="review__author-icon">
+        <i class="review__icon fa-solid fa-quote-right"></i>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+                            </div>
+
+
+                    </header>
+
+
+
+                </section>
+
+                
+
+
+               <section class="about__price" aria-labelledby="pricing-title">
+  <header class="price__header">
+    <h2 id="pricing-title" class="price__title">Tarifas y Servicios</h2>
+
+    <div class="prices__container">
+      <!-- Plan Básico -->
+      <article class="price__box" aria-label="Plan Básico">
+        <div class="price__subtitle">
+          <span class="prices__text">Básico</span>
+        </div>
+
+        <div class="prices__price">
+          <span class="prices__number">desde 300€</span>
+          <small class="prices__advice">Proyecto único</small>
+        </div>
+
+        <ul class="prices__features">
+          <li class="prices__reward">Landing 1–3 secciones</li>
+          <li class="prices__reward">Diseño responsive + accesibilidad básica</li>
+          <li class="prices__reward">Entrega en 1–2 semanas</li>
+          <li class="prices__reward">Deploy en Vercel/Netlify</li>
+        </ul>
+
+        <div class="prices__buy">
+          <a href="contacto.html#contacto" class="prices__btn" aria-label="Solicitar presupuesto plan básico">
+            Solicitar presupuesto
+          </a>
+        </div>
+      </article>
+
+      <!-- Plan Avanzado -->
+      <article class="price__box price__box--featured" aria-label="Plan Avanzado">
+        <div class="price__subtitle">
+          <span class="prices__text">Avanzado</span>
+          <span class="prices__badge" aria-hidden="true">Más elegido</span>
+        </div>
+
+        <div class="prices__price">
+          <span class="prices__number">desde 600€</span>
+          <small class="prices__advice">Web/app frontend</small>
+        </div>
+
+        <ul class="prices__features">
+          <li class="prices__reward">Multipágina o SPA (React/Vite)</li>
+          <li class="prices__reward">Animaciones y microinteracciones (Framer/GSAP)</li>
+          <li class="prices__reward">Integración de APIs básicas</li>
+          <li class="prices__reward">SEO técnico + rendimiento</li>
+          <li class="prices__reward">Entrega 3–5 semanas</li>
+        </ul>
+
+        <div class="prices__buy">
+          <a href="contacto.html#contacto" class="prices__btn prices__btn--primary" aria-label="Solicitar presupuesto plan avanzado">
+            Solicitar presupuesto
+          </a>
+        </div>
+      </article>
+
+      <!-- Plan Premium -->
+      <article class="price__box" aria-label="Plan Premium">
+        <div class="price__subtitle">
+          <span class="prices__text">Premium</span>
+        </div>
+
+        <div class="prices__price">
+          <span class="prices__number">desde 1000€</span>
+          <small class="prices__advice">Producto completo</small>
+        </div>
+
+        <ul class="prices__features">
+          <li class="prices__reward">Research ligero + UI/UX en Figma</li>
+          <li class="prices__reward">Frontend + Integración de APIs/IA</li>
+          <li class="prices__reward">Branding básico y sistema de diseño</li>
+          <li class="prices__reward">Analytics + handoff y soporte inicial</li>
+          <li class="prices__reward">Entrega 5–8 semanas</li>
+        </ul>
+
+        <div class="prices__buy">
+          <a href="contacto.html#contacto" class="prices__btn" aria-label="Solicitar presupuesto plan premium">
+            Solicitar presupuesto
+          </a>
+        </div>
+      </article>
+    </div>
+  </header>
+</section>
+
+
+<section class="about__price-note" aria-labelledby="price-note-title">
+  <div class="price-note__container">
+    <h4 id="price-note-title" class="price-note__title">Precios orientativos</h4>
+    <p class="price-note__text">
+      Las tarifas mostradas son aproximadas y pueden variar según el alcance, la complejidad y los plazos del proyecto.
+      Todos los presupuestos incluyen una reunión inicial gratuita para definir requisitos y ajustar el coste final.
+    </p>
+  </div>
+</section>
+
+<!-- SVG SPRITE (una sola vez en la página) -->
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
+  <defs>
+    <linearGradient id="grad-brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5ca6c4"/>
+      <stop offset="100%" stop-color="#5ca6c4"/>
+    </linearGradient>
+
+    <!-- Rayo: entregas rápidas -->
+    <symbol id="icon-bolt" viewBox="0 0 24 24">
+      <path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z" fill="url(#grad-brand)"/>
+    </symbol>
+
+    <!-- Pincel/Regla: UI centrado en usuario -->
+    <symbol id="icon-ux" viewBox="0 0 24 24">
+      <path d="M3 4h10v6H3zM3 12h10v8H3z" fill="none" stroke="url(#grad-brand)" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M17 3l4 4m0-4-4 4" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Handshake: comunicación -->
+    <symbol id="icon-handshake" viewBox="0 0 24 24">
+      <path d="M7 12l3 3a3 3 0 004 0l3-3M2 12l5-5 5 5M22 12l-5-5-5 5" fill="none" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Grafica: resultados -->
+    <symbol id="icon-chart" viewBox="0 0 24 24">
+      <path d="M3 20h18" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M6 16v-4M12 16V8M18 16v-6" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Llave inglesa: stack -->
+    <symbol id="icon-tools" viewBox="0 0 24 24">
+      <path d="M15 3a5 5 0 00-4 8.66L5 18l1 1 6-6A5 5 0 1015 3z" fill="none" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Bombilla: proyectos reales / IA -->
+    <symbol id="icon-bulb" viewBox="0 0 24 24">
+      <path d="M9 18h6M9 21h6" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12 3a6 6 0 00-4 10c1.5 1.3 2 2.5 2 3h4c0-1 0.5-1.7 2-3a6 6 0 00-4-10z" fill="none" stroke="url(#grad-brand)" stroke-width="2"/>
+    </symbol>
+  </defs>
+</svg>
+
+<section class="about__highlights" aria-labelledby="highlights-title">
+  <header class="highlights__header">
+    <h2 id="highlights-title">Lo más <span class="title__color">destacado</span></h2>
+  </header>
+
+  <div class="highlights__container">
+    <div class="highlight__item">
+      <svg class="highlight__icon" role="img" aria-label="Entregas rápidas"><use href="#icon-bolt"/></svg>
+      <span>Entregas rápidas y optimizadas</span>
+    </div>
+    <div class="highlight__item">
+      <svg class="highlight__icon" role="img" aria-label="Diseño centrado en el usuario"><use href="#icon-ux"/></svg>
+      <span>Diseño centrado en el usuario</span>
+    </div>
+    <div class="highlight__item">
+      <svg class="highlight__icon" role="img" aria-label="Comunicación clara"><use href="#icon-handshake"/></svg>
+      <span>Comunicación clara y fluida</span>
+    </div>
+    <div class="highlight__item">
+      <svg class="highlight__icon" role="img" aria-label="Resultados medibles"><use href="#icon-chart"/></svg>
+      <span>Resultados medibles</span>
+    </div>
+    <div class="highlight__item">
+      <svg class="highlight__icon" role="img" aria-label="Stack moderno"><use href="#icon-tools"/></svg>
+      <span>Stack moderno y versátil</span>
+    </div>
+    <div class="highlight__item">
+      <svg class="highlight__icon" role="img" aria-label="Experiencia real"><use href="#icon-bulb"/></svg>
+      <span>Experiencia real en proyectos (APIs e IA)</span>
+    </div>
+  </div>
+</section>
+
+
+
+    </div>
+
+
+    </header>
+
+
+
+    </section>
+
+
+
+
+
+    </main>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

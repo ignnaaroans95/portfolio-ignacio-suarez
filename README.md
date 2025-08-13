@@ -49,13 +49,4 @@ Diseñado para transmitir **profesionalidad** y **creatividad**, este sitio web 
 
 ---
 
-## 🚀 Instalación y uso
 
-```bash
-# Clonar el repositorio
-git clone https://github.com/ignnaaroans95/portfolio-ignacio.git
-
-# Entrar en la carpeta del proyecto
-cd portfolio-ignacio
-
-# Abrir el index.html en tu navegador o usar un servidor local Como queda mejor el readme con iconitos o sin ellos

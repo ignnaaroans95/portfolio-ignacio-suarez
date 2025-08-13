@@ -27,7 +27,7 @@ Diseñado para transmitir **profesionalidad** y **creatividad**, este sitio web 
 
 ## 📸 Mockups
 
-> Estod son algunos de los mockups en vista `responsive y móvil/`.
+> Estos son algunos de los mockups en vista `responsive y móvil`.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ignnaaroans95/ignnaaroans95/main/assets/mockup1.png" alt="Mockup 1" width="45%"/>

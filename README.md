@@ -30,7 +30,7 @@ Diseñado para transmitir **profesionalidad** y **creatividad**, este sitio web 
 > Sustituye las imágenes de ejemplo por las tuyas en la carpeta `assets/mockups/`.
 
 <p align="center">
-  <img src="assets/mockups/mockup1.png" alt="Mockup 1" width="45%"/>
+  <img src="https://raw.githubusercontent.com/ignnaaroans95/ignnaaroans95/main/assets/mockup1.png" alt="Mockup 1" width="45%"/>
   <img src="assets/mockups/mockup2.png" alt="Mockup 2" width="45%"/>
 </p>
 

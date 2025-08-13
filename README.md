@@ -1,7 +1,9 @@
 <h1 align="center">💼 Portfolio Ignacio Suárez Ruiz</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ignnaaroans95/ignnaaroans95/main/assets/cabeceraportfolio.png" alt="Logo Portfolio" width="100%"/>
+  <a href="https://portfolio-ignacio-suarez.vercel.app" target="_blank">
+    <img src="https://raw.githubusercontent.com/ignnaaroans95/ignnaaroans95/main/assets/cabeceraportfolio.png" alt="Logo Portfolio" width="100%"/>
+  </a>
 </p>
 
 ---

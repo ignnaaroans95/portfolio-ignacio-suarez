@@ -200,137 +200,91 @@
 
         <main class="layout__content">
 
-            <section class="content__page content__contact">
+          <section class="content__page content__contact">
+
+  <header class="contact__header">
+    <h1 class="contact__title">Contacto</h1>
+  </header>
+
+  <div class="contact__container">
+
+    <!-- Tarjetas metálicas -->
+    <section class="contact__info">
+
+      <div class="contact__data metal-card">
+        <i class="contact__icon fa-solid fa-location-dot"></i>
+        <h2 class="contact__subtitle">Madrid</h2>
+      </div>
+
+      <div class="contact__data metal-card">
+        <i class="contact__icon fa-solid fa-phone"></i>
+        <h2 class="contact__subtitle">684304919</h2>
+      </div>
+
+      <div class="contact__data metal-card">
+        <i class="contact__icon fa-solid fa-envelope"></i>
+        <h2 class="contact__subtitle">1995igna@gmail.com</h2>
+      </div>
+
+      <div class="contact__data metal-card">
+        <i class="contact__icon fa-solid fa-code"></i>
+        <h2 class="contact__subtitle">Desarrollador</h2>
+      </div>
+
+    </section>
+
+    <!-- Formulario con panel metálico -->
+    <section class="contact__form-box metal-panel">
+
+      <header class="contact__form-header">
+        <h3 class="contact-header__title">¿Cómo  puedo <span class="subtitle__color">Ayudarte?</span></h3>
+      </header>
+
+      <!-- Mapa con bordes difuminados -->
+      <div class="contact__map map--feather" id="load-iframe-map">
+        <span class="loader"></span>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12121.087564441075!2d-3.937040316387697!3d40.57975353980123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4177c2c48e0265%3A0x8f461cb50b83d086!2s28250%20Torrelodones%2C%20Madrid!5e0!3m2!1ses!2ses!4v1692025257039!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <form class="contact__form">
+        <div class="form__container">
+
+          <section class="form__left">
+            <div class="form__group">
+              <input type="text" class="form__input" name="name" required placeholder="Nombre">
+              <label for="name" class="form__label">Nombre</label>
+            </div>
+
+            <div class="form__group">
+              <input type="email" class="form__input" name="email" required placeholder="Email">
+              <label for="email" class="form__label">Email</label>
+            </div>
+
+            <div class="form__group">
+              <input type="text" class="form__input" name="subjet" required placeholder="Asunto">
+              <label for="subjet" class="form__label">Asunto</label>
+            </div>
+          </section>
+
+          <section class="form__right">
+            <div class="form__group form__group--textarea">
+              <textarea class="form__input form__input--textarea" name="message" required placeholder="Mensaje"></textarea>
+              <label for="message" class="form__label">Mensaje</label>
+            </div>
+          </section>
+
+        </div>
+        <input type="submit" class="form__button" value="Enviar Mensaje">
+      </form>
+
+      
+
+    </section>
+  </div>
+</section>
 
-                <header class="contact__header">
-
-                    <h1 class="contact__title">Contacto</h1>
-
-                </header>
-
-                <div class="contact__container">
-
-
-                    <section class="contact__info">
-
-                        <div class="contact__data">
-
-                            <i class="contact__icon fa-solid fa-location-dot"></i>
-                            <h2 class="contact__subtitle">Madrid</h2>
-
-
-                        </div>
-
-                        <div class="contact__data">
-
-                            <i class="contact__icon fa-solid fa-phone"></i>
-                            <h2 class="contact__subtitle">684304919</h2>
-
-
-                        </div>
-
-                       
-                        <div class="contact__data">
-
-                            <i class="contact__icon fa-solid fa-envelope"></i>
-                            <h2 class="contact__subtitle">1995igna@gmail.com</h2>
-
-
-                        </div>
-
-                        <div class="contact__data">
-
-                            <i class="contact__icon fa-solid fa-code"></i>
-                            <h2 class="contact__subtitle">Desarrollador</h2>
-
-
-                        </div>
-
-
-
-                    </section>
-
-
-                    
-                    <section class="contact__form-box">
-
-                    
-
-                        <header class="contact__form-header">
-
-                            <h3 class="contact-header__title">¿Cómo  puedo <span class="subtitle__color">Ayudarte?</span>
-                            </h3>
-
-
-
-                        </header>
-
-                        <div class="contact__map" id="load-iframe-map">
-
-                            <span class="loader"></span>
-
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12121.087564441075!2d-3.937040316387697!3d40.57975353980123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4177c2c48e0265%3A0x8f461cb50b83d086!2s28250%20Torrelodones%2C%20Madrid!5e0!3m2!1ses!2ses!4v1692025257039!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                        </div>
-
-                        <form class="contact__form">
-
-                            <div class="form__container">
-
-                                <section class="form__left">
-
-                                    <div class="form__group">
-
-                                        <input type="text" class="form__input" name="name" required
-                                            placeholder="Nombre">
-                                        <label for="name" class="form__label">Nombre</label>
-
-
-                                    </div>
-
-                                    <div class="form__group">
-
-                                        <input type="email" class="form__input" name="email" required
-                                            placeholder="Email">
-                                        <label for="email" class="form__label">Email</label>
-
-
-                                    </div>
-
-
-                                    <div class="form__group">
-
-                                        <input type="text" class="form__input" name="subjet" required
-                                            placeholder="Asunto">
-                                        <label for="subjet" class="form__label">Asunto</label>
-
-
-                                    </div>
-
-
-
-                            </div>
-
-                            <section class="form__right">
-
-                                <div class="form__group" form__group--textarea>
-
-                                    <textarea class="form__input form__input--textarea" name="message" required
-                                        placeholder="Mensaje"></textarea>
-                                    <label for="message" class="form__label">Mensaje</label>
-
-
-                                </div>
-
-                            </section>
-
-                            <input type="submit" class="form__button" value="Enviar Mensaje">
-
-                    </section>
-
-                    </form>
-
-            </section>
 
 
     </div>

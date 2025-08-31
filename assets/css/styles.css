@@ -3564,3 +3564,64 @@ height: 14rem;
 @media (min-width: 1101px){
   .price__box{ min-height: 460px; }     /* sube/baja 440–480 según te guste */
 }
+
+/* Mantén el botón en su sitio; solo espaciado del icono */
+.btn-whatsapp{ display:inline-flex; align-items:center; }
+.btn-whatsapp .icon-wa{ margin-right:8px; font-size:1.05em; line-height:0; }
+
+
+/* (opcional) micro-anim al hover, coherente con tu gradiente */
+.btn-whatsapp{ background-size:220% 220%; }
+.btn-whatsapp:hover{ background-position:100% 0; filter:saturate(1.05); }
+
+/* Botón de WhatsApp del hero: más separación icono-texto */
+.btn-whatsapp{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;            /* ← ajusta 8–12px a tu gusto */
+}
+
+.btn-whatsapp .icon-wa{
+  margin-right: 0;      /* anulamos márgenes previos */
+  line-height: 0;       /* evita que “salte” verticalmente */
+  flex-shrink: 0;       /* que no se comprima en responsive */
+}
+
+/* ===== Floating Action Button (WhatsApp) ===== */
+.fab{
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));   /* respeta notch/safe areas */
+  bottom: max(20px, env(safe-area-inset-bottom));
+  width: 56px; height: 56px; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; z-index: 999;
+  box-shadow: 0 14px 28px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.35);
+  transition: transform .15s ease, box-shadow .15s ease, background-position 2.2s ease;
+}
+
+/* Paleta coherente con tu brand (turquesa) */
+.fab--wa{
+  color: #fff;
+  background: linear-gradient(120deg, #2F80A0, #5AA6BC, #2F80A0);
+  background-size: 220% 220%;
+  font-size: 24px;
+}
+.fab--wa:hover{
+  transform: translateY(-2px);
+  background-position: 100% 0;
+  box-shadow: 0 18px 36px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.45);
+}
+.fab--wa:active{ transform: translateY(1px); }
+
+/* Ajustes por tamaño de pantalla (que no choque con tu sidebar de iconos) */
+@media (min-width: 1100px) and (max-width: 1500px){
+  .fab--wa{ right: 24px; bottom: 24px; }  /* un pelín más hacia dentro */
+}
+/* Móvil: ligeramente más pequeña y separada del borde */
+@media (max-width: 480px){
+  .fab--wa{ width: 52px; height: 52px; right: 16px; bottom: 16px; font-size: 22px; }
+}
+
+/* No mostrar al imprimir */
+@media print{ .fab{ display: none !important; } }
+

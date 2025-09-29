@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* ============================
+     FILTRO DE PROYECTOS
+  ============================ */
   const filterOptions = document.querySelectorAll(".portfolio__option");
   const projects = document.querySelectorAll(".gallery__item");
 
@@ -21,6 +24,43 @@ document.addEventListener("DOMContentLoaded", () => {
           project.classList.add("hidden");
         }
       });
+    });
+  });
+
+  /* ============================
+     MODALES DE CASOS DE ESTUDIO
+  ============================ */
+  const caseStudyButtons = document.querySelectorAll(".case-study-btn");
+  
+  caseStudyButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.getAttribute("data-modal"); // ej: data-modal="librosModal"
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add("show");
+        modal.setAttribute("aria-hidden", "false");
+      }
+    });
+  });
+
+  // Cerrar modales
+  const modals = document.querySelectorAll(".modal-overlay");
+  
+  modals.forEach(modal => {
+    const closeBtn = modal.querySelector(".modal-close");
+    
+    // Cerrar con botón
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("show");
+      modal.setAttribute("aria-hidden", "true");
+    });
+
+    // Cerrar clic fuera
+    modal.addEventListener("click", e => {
+      if (e.target.classList.contains("modal-overlay")) {
+        modal.classList.remove("show");
+        modal.setAttribute("aria-hidden", "true");
+      }
     });
   });
 });

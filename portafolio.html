@@ -8,8 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:ital,wght@1,100&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:ital,wght@1,100&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
 
     <!--Estilos-->
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
@@ -254,7 +255,143 @@
   </div>
   <figcaption class="gallery__title">LibrOs.app</figcaption>
   <span class="gallery__category">Proyecto personal</span>
+
+  <!-- Botón minimalista -->
+<button class="case-study-btn libros" data-modal="librosModal">Ver caso de estudio</button>
+
+
+<!-- Modal LibrOs.app -->
+<div id="librosModal" class="modal-overlay" aria-hidden="true">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="Cerrar">✕</button>
+    
+    <h2 class="modal-title">Caso de estudio: LibrOs.app</h2>
+    <p class="modal-subtitle">Recomendador literario con APIs externas y diseño UI/UX editorial</p>
+    
+<div class="cs">
+  <p class="cs-kicker">Proyecto personal · Producto vivo · v1</p>
+  <h3>Qué es LibrOs.app</h3>
+  <p>
+    Un recomendador de libros que une <strong>APIs abiertas</strong> (Google Books + Wikipedia),
+    <strong>UI/UX editorial</strong> y pequeñas dosis de IA para generar sinopsis y mejorar la
+    exploración. Objetivo: que el lector encuentre “ese” libro sin perderse en ruido.
+  </p>
+
+  <div class="cs-tags">
+    <span class="cs-tag">Frontend puro (HTML/CSS/JS)</span>
+    <span class="cs-tag">Firebase Auth (Google)</span>
+    <span class="cs-tag">Google Books · Wikipedia</span>
+    <span class="cs-tag">Vercel</span>
+    <span class="cs-tag">UX first · Accesibilidad AA</span>
+  </div>
+
+  <h3>Reto</h3>
+  <p>
+    Convertir un listado infinito en una <em>experiencia curada</em>: menos scroll, más intención.
+    Poner el foco en la <strong>decisión</strong> (¿qué leo ahora?) y no en la fricción
+    (formularios, filtros rotos, portadas feo-pixeladas).
+  </p>
+
+  <h3>Solución (en una frase)</h3>
+  <p>
+    <strong>Chips de intención</strong> (género · estado de ánimo · longitud) + búsqueda de texto + ficha
+    elegante con <strong>sinopsis generada</strong>, <strong>bio del autor</strong> y portadas
+    limpias, todo en un flujo <strong>una sola pantalla</strong>.
+  </p>
+
+  <!-- Mockups -->
+  <div class="cs-grid">
+    <figure class="cs-fig">
+      <img src="assets/mockups/libros/hero-cover.png" alt="Home con hero editorial y portadas limpias">
+      <figcaption>Home editorial: tipografía Cormorant + paleta bronce/madera.</figcaption>
+    </figure>
+    <figure class="cs-fig">
+      <img src="assets/mockups/libros/chips-intent.png" alt="Chips de intención para filtrar por género, mood y longitud">
+      <figcaption>Chips de intención: el usuario decide <em>cómo quiere leer</em>.</figcaption>
+    </figure>
+    <figure class="cs-fig">
+      <img src="assets/mockups/libros/book-modal.png" alt="Modal de libro con sinopsis, ratings y CTA">
+      <figcaption>Modal del libro: sinopsis generada + obras del autor + CTA claro.</figcaption>
+    </figure>
+    <figure class="cs-fig">
+      <img src="assets/mockups/libros/author-bio.png" alt="Bloque de biografía del autor con glass-card y toggle">
+      <figcaption>Bio del autor en glass-card con toggle (lectura corta/larga).</figcaption>
+    </figure>
+  </div>
+
+  <h3>Arquitectura & módulos</h3>
+  <pre class="cs-code"><code>
+/js
+  ├─ state.js          // estado global (selecciones, libro actual, historial)
+  ├─ config.js         // constantes: GENRES, MOODS, LENGTH, endpoints
+  ├─ helpers.js        // utilidades DOM ($, $all) + formateos
+  ├─ render.js         // pintado de resultados, ficha actual, guardados, modal
+  ├─ chips.js          // montaje de chips + monoselección
+  ├─ textSearch.js     // búsqueda libre por título/autor/tema
+  ├─ api.js            // Google Books + Wikipedia + generación de sinopsis
+  ├─ quotes.js         // tarjeta de citas destacadas
+  ├─ reco.js           // lógica de recomendación basada en chips
+  ├─ author-toggle.js  // abrir/cerrar bio extendida
+  └─ main.js           // orquestación de eventos y flujo
+  </code></pre>
+
+  <h3>Decisiones de diseño</h3>
+  <ul class="cs-list">
+    <li><strong>Tipografía</strong>: Cormorant Garamond para títulos (alma editorial), sans-serif limpia para cuerpo.</li>
+    <li><strong>Paleta</strong>: bronces y cálidos con sombras suaves; sensación “biblioteca moderna”.</li>
+    <li><strong>Micro-interacciones</strong>: hover sutil, modales con <em>blur</em>, estrellas 0–10, chips con feedback instantáneo.</li>
+    <li><strong>Portadas</strong>: prioridad a calidad → placeholders elegantes si falta imagen.</li>
+  </ul>
+
+  <h3>Funcionalidades clave</h3>
+  <ul class="cs-list">
+    <li>Autenticación con Google (Firebase) para favoritos y progreso.</li>
+    <li>Recomendación por chips (género/mood/longitud) + búsqueda manual.</li>
+    <li>Sinopsis generada con IA y bio del autor (Wikipedia) sin salir de la app.</li>
+    <li>Trending con “cortina” y tabs (ES vs. NYT) con portadas estilizadas.</li>
+    <li>Bloques glass-card (autor) y modal con accesibilidad (teclas, focus-trap).</li>
+  </ul>
+
+  <h3>Accesibilidad & rendimiento</h3>
+  <ul class="cs-list">
+    <li>Modal accesible: <code>aria-hidden</code>, etiquetas y cierre por <kbd>Esc</kbd>.</li>
+    <li>Lazy-loading de imágenes y caché de respuestas API básicas.</li>
+    <li>Contraste testeado a nivel AA; tamaños fluidos con <code>clamp()</code>.</li>
+  </ul>
+
+  <h3>Retos & soluciones</h3>
+  <ul class="cs-list">
+    <li><strong>Datos irregulares</strong> (portadas/ratings): normalización + placeholders de marca.</li>
+    <li><strong>Texto largo</strong> (bios/sinopsis): colapsado con toggle y lectura cómoda.</li>
+    <li><strong>Monolito → modular</strong>: separación por responsabilidades para escalar sin dolor.</li>
+  </ul>
+
+  <h3>Aprendizajes</h3>
+  <p>
+    Diseñar primero la <strong>decisión</strong> y después la interfaz. Menos “features”, más
+    <em>flow</em> claro. Y documentarlo: la narrativa del producto pesa tanto como el código.
+  </p>
+
+  <h3>Roadmap</h3>
+  <ul class="cs-list">
+    <li>Perfiles con seguimiento de lecturas y favoritos.</li>
+    <li>Más proveedores de datos (ratings consolidados, reseñas limpias).</li>
+    <li>Listas curadas y modo lectura nocturno.</li>
+    <li>Pequeño “club” con recomendaciones semanales.</li>
+  </ul>
+
+  <div class="cs-cta">
+    <a class="cs-btn demo" href="https://libros-app-vay6.vercel.app/" target="_blank" rel="noopener">Ver demo</a>
+    <a class="cs-btn code" href="https://github.com/ignnaaroans95/libros.app" target="_blank" rel="noopener">Ver código</a>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
 </figure>
+
 
 
 
@@ -347,9 +484,7 @@
 
     </div>
 
-    <!--Script JS-->
-    <script src="assets/js/portfolio.js"></script>
-    <script src="assets/js/timeline.js" defer></script>
+
 </div>
 
 
@@ -388,6 +523,10 @@
    aria-label="Escríbeme por WhatsApp">
   <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
 </a>
+
+    <!--Script JS-->
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/timeline.js" defer></script>
 </body>
 
 </html>

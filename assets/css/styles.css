@@ -3824,3 +3824,24 @@ height: 14rem;
 .modal-content::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
+
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.cs-fig img {
+  max-width: 260px; /* o 280px según gusto */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.15);
+}
+.cs-fig figcaption {
+  margin-top: .5rem;
+  font-size: .9rem;
+  text-align: center;
+  max-width: 240px;
+}

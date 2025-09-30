@@ -272,7 +272,7 @@
   <p class="cs-kicker">Proyecto personal · Producto vivo · v1</p>
   <h3>Qué es LibrOs.app</h3>
   <p>
-    Un recomendador de libros que une <strong>APIs abiertas</strong> (Google Books + Wikipedia),
+    Un recomendador de libros que une <strong>APIs </strong> ,
     <strong>UI/UX editorial</strong> y pequeñas dosis de IA para generar sinopsis y mejorar la
     exploración. Objetivo: que el lector encuentre “ese” libro sin perderse en ruido.
   </p>
@@ -300,22 +300,26 @@
   </p>
 
   <!-- Mockups -->
+  
   <div class="cs-grid">
-    <figure class="cs-fig">
-      <img src="assets/mockups/libros/hero-cover.png" alt="Home con hero editorial y portadas limpias">
-      <figcaption>Home editorial: tipografía Cormorant + paleta bronce/madera.</figcaption>
-    </figure>
+  
     <figure class="cs-fig">
       <img src="assets/mockups/libros/chips-intent.png" alt="Chips de intención para filtrar por género, mood y longitud">
       <figcaption>Chips de intención: el usuario decide <em>cómo quiere leer</em>.</figcaption>
     </figure>
+
+ <figure class="cs-fig">
+      <img src="assets/mockups/libros/result-chip.png" alt="Chips de intención para filtrar por género, mood y longitud">
+      <figcaption>Se muestran los resultados <em>a partir de los chips seleccionados mostrándose portada premium del libro en cuestión</em>.</figcaption>
+    </figure>
+
     <figure class="cs-fig">
       <img src="assets/mockups/libros/book-modal.png" alt="Modal de libro con sinopsis, ratings y CTA">
-      <figcaption>Modal del libro: sinopsis generada + obras del autor + CTA claro.</figcaption>
+      <figcaption>Una vez buscado el libro, se muestra un modal con sinopsis, ratings y CTA claro.</figcaption>
     </figure>
     <figure class="cs-fig">
       <img src="assets/mockups/libros/author-bio.png" alt="Bloque de biografía del autor con glass-card y toggle">
-      <figcaption>Bio del autor en glass-card con toggle (lectura corta/larga).</figcaption>
+      <figcaption>En dicho modal, se muestra la bio del autor y todas sus obras .</figcaption>
     </figure>
   </div>
 
@@ -347,22 +351,22 @@
   <ul class="cs-list">
     <li>Autenticación con Google (Firebase) para favoritos y progreso.</li>
     <li>Recomendación por chips (género/mood/longitud) + búsqueda manual.</li>
-    <li>Sinopsis generada con IA y bio del autor (Wikipedia) sin salir de la app.</li>
-    <li>Trending con “cortina” y tabs (ES vs. NYT) con portadas estilizadas.</li>
+    <li>Sinopsis generada con IA , bio del autor, y todas las obras relacionadas sin salir de la app.</li>
+    <li>Trending con “cortina” y con portadas estilizadas.</li>
     <li>Bloques glass-card (autor) y modal con accesibilidad (teclas, focus-trap).</li>
   </ul>
 
   <h3>Accesibilidad & rendimiento</h3>
   <ul class="cs-list">
     <li>Modal accesible: <code>aria-hidden</code>, etiquetas y cierre por <kbd>Esc</kbd>.</li>
-    <li>Lazy-loading de imágenes y caché de respuestas API básicas.</li>
+    <li>Lazy-loading de imágenes y caché de respuestas API .</li>
     <li>Contraste testeado a nivel AA; tamaños fluidos con <code>clamp()</code>.</li>
   </ul>
 
   <h3>Retos & soluciones</h3>
   <ul class="cs-list">
-    <li><strong>Datos irregulares</strong> (portadas/ratings): normalización + placeholders de marca.</li>
-    <li><strong>Texto largo</strong> (bios/sinopsis): colapsado con toggle y lectura cómoda.</li>
+    <li><strong>Datos irregulares</strong> (portadas/ratings): normalización + placeholders de marca en caso de no obtener portadas oficiales</li>
+    <li><strong>Texto largo</strong> (bios/sinopsis): colapsado con toggle y lectura cómoda  para mayor comodidad</li>
     <li><strong>Monolito → modular</strong>: separación por responsabilidades para escalar sin dolor.</li>
   </ul>
 
@@ -382,7 +386,7 @@
 
   <div class="cs-cta">
     <a class="cs-btn demo" href="https://libros-app-vay6.vercel.app/" target="_blank" rel="noopener">Ver demo</a>
-    <a class="cs-btn code" href="https://github.com/ignnaaroans95/libros.app" target="_blank" rel="noopener">Ver código</a>
+    
   </div>
 </div>
 

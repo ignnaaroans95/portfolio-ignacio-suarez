@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -20,7 +20,8 @@
          <link rel="stylesheet" href="assets/css/responsive.css">
 
          <!--Script JS-->
-<script src="assets/js/menu.js" defer></script>
+<script src='assets/js/menu.js' defer></script>
+    <script src='assets/js/cv-download.js' defer></script>
 
 </head>
 
@@ -91,13 +92,6 @@
             <span class="menu__overlay">Portafolio</span>
             </a></li>
 
-            <li class="menu__option">
-
-                <a href="blog.html" class="menu__link">
-                
-                <i class="fa-solid fa-book menu__icon"></i>
-                <span class="menu__overlay">Blog</span>
-                </a></li>
 
                 <li class="menu__option">
 
@@ -150,9 +144,7 @@
 
 <div class="user-info__buttons">
 
-<a href="assets/cv/CVIgnacioSuarez.pdf" class="user-info__btn" download="CVIgnacioSuarez.pdf">
-  Descargar CV
-</a>
+<button class="user-info__btn" onclick="openCvPopup()">Descargar CV</button>
 
 
 
@@ -164,7 +156,7 @@
 
 <footer class="user-info__footer">
 
-&copy; 2025 Ignacio Suarez Ruiz
+&copy; 2026 Ignacio Suarez Ruiz
 
 
 </footer>
@@ -196,23 +188,27 @@
 <section class="content__page">
 
 <h1 class="page__name">Ignacio Suárez</h1>
-<h2 class="page__job">Desarrollador FrontEnd</h2>
+<h2 class="page__job">Desarrollador Full Stack</h2>
+
+<div class="hero-divider" aria-hidden="true"></div>
 
 <div class="hero-cta" role="region" aria-label="Contratación freelance">
   <p class="cta-sub">
-     Disponible para proyectos Frontend & UI/UX
-    <span class="cta-mini">Landing pages, rediseños, micro-apps</span>
+    <span class="cta-available">
+      <span class="cta-dot" aria-hidden="true"></span>
+      Disponible para proyectos
+    </span>
+    <span class="cta-mini">Frontend &middot; Backend &middot; IA &middot; Mobile</span>
   </p>
   <div class="cta-buttons">
-<a class="btn-cta btn-primary btn-whatsapp"
-   href="https://wa.me/34684304919?text=Hola%20Ignacio%2C%20vengo%20de%20tu%20portfolio%20y%20quiero%20hablar%20sobre%20%5BLanding%2099%E2%82%AC%5D%20o%20%5BRedise%C3%B1o%20150%E2%82%AC%5D."
-   target="_blank" rel="noopener"
-   aria-label="Escríbeme por WhatsApp">
-  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Hablemos
-</a>
-
-  <a class="btn-cta btn-ghost" href="./sobre-mi.html" aria-label="Ver servicios"> Servicios y tarifas</a>
-  <a class="btn-cta btn-alt" href="./portafolio.html" aria-label="Ver proyectos"> Proyectos</a>
+    <a class="btn-cta btn-primary btn-whatsapp"
+       href="https://wa.me/34684304919?text=Hola%20Ignacio%2C%20vengo%20de%20tu%20portfolio%20y%20me%20interesa%20hablar%20sobre%20un%20proyecto."
+       target="_blank" rel="noopener"
+       aria-label="Escríbeme por WhatsApp">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Hablemos
+    </a>
+    <a class="btn-cta btn-ghost" href="./sobre-mi.html" aria-label="Ver servicios">Servicios y tarifas</a>
+    <a class="btn-cta btn-alt" href="./portafolio.html" aria-label="Ver proyectos">Proyectos</a>
   </div>
 </div>
 

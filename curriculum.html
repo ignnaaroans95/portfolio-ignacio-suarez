@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="assets/css/scroll.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <script src="assets/js/menu.js" defer></script>
+    <script src='assets/js/menu.js' defer></script>
+    <script src='assets/js/cv-download.js' defer></script>
 </head>
 
 <body>
@@ -93,14 +94,6 @@
                             </a>
                         </li>
 
-                        <li class="menu__option">
-
-                            <a href="blog.html" class="menu__link">
-
-                                <i class="fa-solid fa-book menu__icon"></i>
-                                <span class="menu__overlay">Blog</span>
-                            </a>
-                        </li>
 
                         <li class="menu__option">
 
@@ -154,9 +147,7 @@
 
                 <div class="user-info__buttons">
 
-                    <a href="assets/cv/CVIgnacioSuarez.pdf" class="user-info__btn" download="CVIgnacioSuarez.pdf">
-  Descargar CV
-</a>
+                    <button class="user-info__btn" onclick="openCvPopup()">Descargar CV</button>
 
 
 
@@ -168,7 +159,7 @@
 
                 <footer class="user-info__footer">
 
-                    &copy; 2025 Ignacio Suarez Ruiz
+                    &copy; 2026 Ignacio Suarez Ruiz
 
 
                 </footer>
@@ -283,41 +274,54 @@
   <header class="timeline__header">
     <h4 class="timeline__year">2024 – 2025</h4>
 
-    <div class="timeline__company-container">
-      <!-- Logo de SkyLink Global -->
-      <img src="assets/img/logo-skylink.png" alt="SkyLink Global" class="timeline__logo">
-      <span class="timeline__company">SkyLink Global</span>
+    <div class="timeline__logo">
+      <img src="assets/img/logo-skylink.png" alt="SkyLink Global" />
     </div>
+    <span class="timeline__company">SkyLink Global</span>
   </header>
 
   <div class="timeline__divider"></div>
 
   <div class="timeline__description">
-    <h3 class="timeline__title">
-      Desarrollador Web Junior & Diseñador de Campañas de Marketing
-    </h3>
-
-    <!-- Cliente principal -->
-    <div class="timeline__client">
-      <img src="assets/img/logo-zendy.png" alt="Zendy.tel" class="timeline__client-logo">
-      <span class="timeline__client-name">Proyecto principal: Zendy.tel</span>
-    </div>
+    <h3 class="timeline__title">Desarrollador Frontend (Prácticas)</h3>
 
     <p class="timeline__text">
-      Colaboré en el desarrollo del ecosistema web y el contenido de marketing del operador móvil <strong>Zendy.tel</strong>,
-      combinando maquetación, pruebas y creatividad orientada a conversión.
+      Desarrollo y mantenimiento de aplicaciones web internas con <strong>Java, HTML5, CSS3 y JavaScript (ES6+)</strong> dentro del ecosistema de Skylink Global.
     </p>
 
     <ul class="timeline__list">
-      <li><strong>Maquetación web:</strong> implementación de vistas responsive, refactor CSS y componentes reutilizables.</li>
-      <li><strong>Testing:</strong> pruebas funcionales y de regresión en la app y la web; reporte y seguimiento de bugs.</li>
-      <li><strong>Marketing:</strong> creación de copys, banners y landing pages para campañas (Zendy.tel).</li>
-      <li><strong>Colaboración:</strong> trabajo con diseño y ventas para alinear mensajes y releases.</li>
+      <li>Mejora de velocidad de carga en un <strong>30 %</strong> mediante optimización de assets y refactorización de componentes críticos.</li>
+      <li>Reducción de deuda técnica en un <strong>25 %</strong> aumentando la mantenibilidad del código.</li>
+      <li>Control de versiones con <strong>Git</strong> y metodologías ágiles (Scrum), reduciendo tiempos de entrega en un 20 %.</li>
+      <li>Revisiones de código y documentación técnica, garantizando calidad y consistencia en todas las entregas.</li>
     </ul>
+  </div>
+</article>
+
+<article class="timelines__timeline">
+  <header class="timeline__header">
+    <h4 class="timeline__year">2025 – Presente</h4>
+    <div class="timeline__logo">
+      <img src="assets/img/logo.webp" alt="Libreos.app" />
+    </div>
+    <span class="timeline__company">Libreos.app</span>
+  </header>
+
+  <div class="timeline__divider"></div>
+
+  <div class="timeline__description">
+    <h3 class="timeline__title">Fundador & Desarrollador Full Stack</h3>
 
     <p class="timeline__text">
-      <em>Este periodo incluyó 3 meses de prácticas curriculares y una extensión de prácticas extracurriculares mediante convenio con el centro de estudios.</em>
+      Diseño, desarrollo y operación de un SaaS en producción para gestión de librerías, construido íntegramente en <strong>JavaScript vanilla</strong> sin frameworks.
     </p>
+
+    <ul class="timeline__list">
+      <li>Arquitectura completa: frontend, backend serverless, base de datos y despliegue en <strong>Vercel + Firebase</strong>.</li>
+      <li>Billing con <strong>Stripe + Google Play</strong> — modelo freemium y suscripciones recurrentes.</li>
+      <li>Chat IA con <strong>GPT-4o-mini</strong> y sistema de pre-renderizado SEO con <strong>+10.000 obras indexadas</strong>.</li>
+      <li>App publicada en <strong>Google Play</strong> con +3.000 visitas/mes orgánicas.</li>
+    </ul>
   </div>
 </article>
 
@@ -342,21 +346,29 @@
 
                     <section class="resume__right">
 
-                        <!-- ===== Habilidades de IA (mismo patrón que Diseño/Código) ===== -->
+                        <!-- Habilidades de código -->
 <header class="resume__subheader">
-  <h2 class="resume__subtitle">Habilidades de <span class="subtitle__color">IA</span></h2>
-
+  <h2 class="resume__subtitle">Habilidades de <span class="subtitle__color">código</span></h2>
   <div class="resume__skills">
+
     <article class="skills__title">
-      <h4 class="skills__text">Prompt design & evaluación</h4>
-      <span class="skills__number">80%</span>
+      <h4 class="skills__text">HTML5 / CSS3</h4>
+      <span class="skills__number">95%</span>
+    </article>
+    <div class="skills__progressbar">
+      <div class="skills__percentage skills__percentage--p5"></div>
+    </div>
+
+    <article class="skills__title">
+      <h4 class="skills__text">JavaScript ES6+ (vanilla)</h4>
+      <span class="skills__number">85%</span>
     </article>
     <div class="skills__progressbar">
       <div class="skills__percentage skills__percentage--p2"></div>
     </div>
 
     <article class="skills__title">
-      <h4 class="skills__text">Integración OpenAI (Node/JS)</h4>
+      <h4 class="skills__text">Node.js / Express</h4>
       <span class="skills__number">70%</span>
     </article>
     <div class="skills__progressbar">
@@ -364,183 +376,39 @@
     </div>
 
     <article class="skills__title">
-      <h4 class="skills__text">UX conversacional</h4>
-      <span class="skills__number">60%</span>
+      <h4 class="skills__text">React / TailwindCSS</h4>
+      <span class="skills__number">50%</span>
+    </article>
+    <div class="skills__progressbar">
+      <div class="skills__percentage skills__percentage--p7"></div>
+    </div>
+
+    <article class="skills__title">
+      <h4 class="skills__text">Java</h4>
+      <span class="skills__number">55%</span>
     </article>
     <div class="skills__progressbar">
       <div class="skills__percentage skills__percentage--p4"></div>
     </div>
 
-    <article class="skills__title">
-      <h4 class="skills__text">RAG ligero / embeddings</h4>
-      <span class="skills__number">40%</span>
-    </article>
-    <div class="skills__progressbar">
-      <div class="skills__percentage skills__percentage--p7"></div>
-    </div>
   </div>
 </header>
 
-
-                        <header class="resume__subheader">
-
-                            <h2 class="resume__subtitle">Habilidades de <span class="subtitle__color">diseño</span></h2>
-
-                            <div class="resume__skills">
-
-<article class="skills__title">
-
-<h4 class="skills__text">Diseño Web</h4>
-<span class="skills__number"> 90%</span>
-
-</article>
-
-<div class="skills__progressbar">
-
-    <div class="skills__percentage skills__percentage--p1"></div>
-
-</div>
-
-<article class="skills__title">
-
-    <h4 class="skills__text">Diseño Banners</h4>
-    <span class="skills__number"> 80%</span>
-    
-    </article>
-    
-    <div class="skills__progressbar">
-    
-        <div class="skills__percentage skills__percentage--p2"></div>
-        
-    </div>
-
-    
-    <article class="skills__title">
-
-        <h4 class="skills__text">Diseño Mockups</h4>
-        <span class="skills__number"> 70%</span>
-        
-        </article>
-        
-        <div class="skills__progressbar">
-        
-            <div class="skills__percentage skills__percentage--p3"></div>
-            
-        </div>
-
-        
-        <article class="skills__title">
-
-            <h4 class="skills__text">Diseño Logos</h4>
-            <span class="skills__number"> 60%</span>
-            
-            </article>
-            
-            <div class="skills__progressbar">
-            
-                <div class="skills__percentage skills__percentage--p4"></div>
-                
-            </div>
-            
-
-
-                            </div>
-
-
-
-                        </header>
-
-                        <header class="resume__subheader">
-
-                            <h2 class="resume__subtitle">Habilidades de <span class="subtitle__color">código</span></h2>
-
-
-
-                       
-
-                        <div class="resume__skills">
-
-                            <article class="skills__title">
-                            
-                            <h4 class="skills__text">HTML/CSS</h4>
-                            <span class="skills__number"> 97%</span>
-                            
-                            </article>
-                            
-                            <div class="skills__progressbar">
-                            
-                                <div class="skills__percentage skills__percentage--p5"></div>
-                            
-                            </div>
-                            
-                            <article class="skills__title">
-                            
-                                <h4 class="skills__text">JavaScript</h4>
-                                <span class="skills__number"> 20%</span>
-                                
-                                </article>
-                                
-                                <div class="skills__progressbar">
-                                
-                                    <div class="skills__percentage skills__percentage--p6"></div>
-                                    
-                                </div>
-                            
-                                
-                                <article class="skills__title">
-                            
-                                    <h4 class="skills__text">React</h4>
-                                    <span class="skills__number"> 40%</span>
-                                    
-                                    </article>
-                                    
-                                    <div class="skills__progressbar">
-                                    
-                                        <div class="skills__percentage skills__percentage--p7"></div>
-                                        
-                                    </div>
-                            
-                                    
-                                    <article class="skills__title">
-                            
-                                        <h4 class="skills__text">PHP</h4>
-                                        <span class="skills__number"> 93%</span>
-                                        
-                                        </article>
-                                        
-                                        <div class="skills__progressbar">
-                                        
-                                            <div class="skills__percentage skills__percentage--p8"></div>
-                                            
-                                        </div>
-
-                             
-                             
-                             
-                             <div class="practicas__container">         <!-- NUEVO: Conocimientos en prácticas (a la derecha) -->
-  <header class="resume__subheader">
-    <h2 class="resume__subtitle">Conocimientos en <span class="subtitle__color">prácticas</span></h2>
-  </header>
-
+<!-- Backend & Cloud -->
+<header class="resume__subheader">
+  <h2 class="resume__subtitle">Backend &amp; <span class="subtitle__color">Cloud</span></h2>
   <div class="resume__skills">
-    <article class="skills__title">
-      <h4 class="skills__text">Maquetación Web</h4>
-      <span class="skills__number">90%</span>
-    </article>
-    <div class="skills__progressbar">
-      <div class="skills__percentage skills__percentage--p1"></div>
-    </div>
 
     <article class="skills__title">
-      <h4 class="skills__text">Testing Funcional</h4>
-      <span class="skills__number">80%</span>
+      <h4 class="skills__text">Firebase (Firestore + Auth)</h4>
+      <span class="skills__number">82%</span>
     </article>
     <div class="skills__progressbar">
       <div class="skills__percentage skills__percentage--p2"></div>
     </div>
 
     <article class="skills__title">
-      <h4 class="skills__text">Optimización CSS</h4>
+      <h4 class="skills__text">Stripe (suscripciones + webhooks)</h4>
       <span class="skills__number">75%</span>
     </article>
     <div class="skills__progressbar">
@@ -548,36 +416,115 @@
     </div>
 
     <article class="skills__title">
-      <h4 class="skills__text">Contenido Marketing</h4>
-      <span class="skills__number">70%</span>
+      <h4 class="skills__text">MySQL / PostgreSQL / MongoDB</h4>
+      <span class="skills__number">65%</span>
     </article>
     <div class="skills__progressbar">
       <div class="skills__percentage skills__percentage--p4"></div>
     </div>
+
+    <article class="skills__title">
+      <h4 class="skills__text">Vercel · Firebase Hosting · Google Play</h4>
+      <span class="skills__number">85%</span>
+    </article>
+    <div class="skills__progressbar">
+      <div class="skills__percentage skills__percentage--p2"></div>
+    </div>
+
   </div>
-                                         </header>
-                            
-                            
-                                                        </div>
+</header>
 
+<!-- IA & Producto -->
 <header class="resume__subheader">
+  <h2 class="resume__subtitle">IA &amp; <span class="subtitle__color">Producto</span></h2>
+  <div class="resume__skills">
 
-<h2 class="resume__subtitle">Areas de <span class="subtitle__color">conocimientos</span></h2>
+    <article class="skills__title">
+      <h4 class="skills__text">Integración OpenAI / ChatBot</h4>
+      <span class="skills__number">78%</span>
+    </article>
+    <div class="skills__progressbar">
+      <div class="skills__percentage skills__percentage--p2"></div>
+    </div>
 
+    <article class="skills__title">
+      <h4 class="skills__text">Prompt Engineering</h4>
+      <span class="skills__number">72%</span>
+    </article>
+    <div class="skills__progressbar">
+      <div class="skills__percentage skills__percentage--p3"></div>
+    </div>
+
+    <article class="skills__title">
+      <h4 class="skills__text">PWA / Android (Google Play)</h4>
+      <span class="skills__number">70%</span>
+    </article>
+    <div class="skills__progressbar">
+      <div class="skills__percentage skills__percentage--p3"></div>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- Habilidades de diseño -->
+<header class="resume__subheader">
+  <h2 class="resume__subtitle">Habilidades de <span class="subtitle__color">diseño</span></h2>
+  <div class="resume__skills">
+
+    <article class="skills__title">
+      <h4 class="skills__text">Diseño Web / UI</h4>
+      <span class="skills__number">90%</span>
+    </article>
+    <div class="skills__progressbar">
+      <div class="skills__percentage skills__percentage--p1"></div>
+    </div>
+
+    <article class="skills__title">
+      <h4 class="skills__text">Responsive / Glassmorphism</h4>
+      <span class="skills__number">88%</span>
+    </article>
+    <div class="skills__progressbar">
+      <div class="skills__percentage skills__percentage--p2"></div>
+    </div>
+
+    <article class="skills__title">
+      <h4 class="skills__text">Figma / Mockups</h4>
+      <span class="skills__number">65%</span>
+    </article>
+    <div class="skills__progressbar">
+      <div class="skills__percentage skills__percentage--p4"></div>
+    </div>
+
+    <article class="skills__title">
+      <h4 class="skills__text">SEO · Core Web Vitals · WCAG</h4>
+      <span class="skills__number">80%</span>
+    </article>
+    <div class="skills__progressbar">
+      <div class="skills__percentage skills__percentage--p2"></div>
+    </div>
+
+  </div>
+</header>
+
+<!-- Áreas de conocimiento -->
+<header class="resume__subheader">
+  <h2 class="resume__subtitle">Áreas de <span class="subtitle__color">conocimiento</span></h2>
 </header>
 
 <div class="resume__knowledges">
-
-<ul class="knowledges__list">
-
-<li class="knowledges__option">Programación</li>
-<li class="knowledges__option">Desarrollo web</li>
-<li class="knowledges__option">Diseño web</li>
-<li class="knowledges__option">Maquetación</li>
-<li class="knowledges__option">Despliegue en la nube</li>
-<li class="knowledges__option">Edición de video</li>
-</ul>
-
+  <ul class="knowledges__list">
+    <li class="knowledges__option">Desarrollo Full Stack</li>
+    <li class="knowledges__option">SaaS en producción</li>
+    <li class="knowledges__option">Integración con IA</li>
+    <li class="knowledges__option">SEO Engineering</li>
+    <li class="knowledges__option">Billing multiplataforma</li>
+    <li class="knowledges__option">Mobile Android (Capacitor)</li>
+    <li class="knowledges__option">UI/UX Design</li>
+    <li class="knowledges__option">APIs REST</li>
+    <li class="knowledges__option">Despliegue en la nube</li>
+    <li class="knowledges__option">Agile / Scrum</li>
+  </ul>
 </div>
 
 <div class="resume__certificates">
@@ -597,9 +544,9 @@
         <div class="certificates__content">
     
     
-    <h4 class="certificate__title">Máster en PHP, SQL, POO, MVC, LARAVEL, SYMFONY, WORDPRESS +</h4>
-    <span class="certificate__id">ID Verificación: 7891</span>
-    <span class="certificate__date">10 de Julio de 2023</span>
+    <h4 class="certificate__title">Python for Everybody — University of Michigan (Coursera)</h4>
+    <span class="certificate__id">University of Michigan · Coursera</span>
+    <span class="certificate__date">2023</span>
         </div>
     
     </article>

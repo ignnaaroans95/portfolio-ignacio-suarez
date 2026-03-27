@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="assets/css/scroll.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <script src="assets/js/menu.js" defer></script>
+    <script src='assets/js/menu.js' defer></script>
+    <script src='assets/js/cv-download.js' defer></script>
 </head>
 
 <body>
@@ -93,14 +94,6 @@
                             </a>
                         </li>
 
-                        <li class="menu__option">
-
-                            <a href="blog.html" class="menu__link">
-
-                                <i class="fa-solid fa-book menu__icon"></i>
-                                <span class="menu__overlay">Blog</span>
-                            </a>
-                        </li>
 
                         <li class="menu__option">
 
@@ -154,9 +147,7 @@
 
                 <div class="user-info__buttons">
 
-                    <a href="assets/cv/CVIgnacioSuarez.pdf" class="user-info__btn" download="CVIgnacioSuarez.pdf">
-  Descargar CV
-</a>
+                    <button class="user-info__btn" onclick="openCvPopup()">Descargar CV</button>
 
 
 
@@ -168,7 +159,7 @@
 
                 <footer class="user-info__footer">
 
-                    &copy; 2025 Ignacio Suarez Ruiz
+                    &copy; 2026 Ignacio Suarez Ruiz
 
 
                 </footer>
@@ -213,10 +204,23 @@
 
                     <article class="about__personal-info__bio">
 
-
-                        <p class="personal-info__description">Soy una persona profundamente curiosa, y apasionada. Me encanta crear experiencias digitales atractivas (o al menos intentarlo), limpias y, sobre todo, usables para las personas. Me considero proactivo, siempre en búsqueda de mejorar y aprender, tanto en lo personal como en lo profesional.
-                            Me encantan los libros y las bicis
+                        <p class="personal-info__description">
+                            Soy una persona profundamente curiosa y apasionada por lo que hago.
+                            Me encanta crear experiencias digitales atractivas, limpias y, sobre todo,
+                            usables para las personas. Me considero proactivo, siempre en búsqueda de mejorar
+                            y aprender — tanto en lo personal como en lo profesional.
                         </p>
+
+                        <blockquote class="bio__quote">
+                            "Construyo productos con los que me gustaría interactuar a mí mismo."
+                        </blockquote>
+
+                        <div class="bio__interests">
+                            <span class="bio__tag"><i class="fa-solid fa-book-open"></i> Lectura</span>
+                            <span class="bio__tag"><i class="fa-solid fa-bicycle"></i> Ciclismo</span>
+                            <span class="bio__tag"><i class="fa-solid fa-mobile-screen-button"></i> Apps móvil</span>
+                            <span class="bio__tag"><i class="fa-solid fa-brain"></i> IA aplicada</span>
+                        </div>
 
                     </article>
 
@@ -225,42 +229,46 @@
                         <ul class="personal-info__list">
 
                             <li class="personal-info__option">
-
-                                <span class="personal-info__title">Edad</span>
-                                <span class="personal-info__value">30</span>
+                                <i class="personal-info__icon fa-solid fa-calendar-days"></i>
+                                <div>
+                                    <span class="personal-info__title">Edad</span>
+                                    <span class="personal-info__value">30</span>
+                                </div>
                             </li>
 
                             <li class="personal-info__option">
-
-                                <span class="personal-info__title">País</span>
-                                <span class="personal-info__value">España</span>
+                                <i class="personal-info__icon fa-solid fa-flag"></i>
+                                <div>
+                                    <span class="personal-info__title">País</span>
+                                    <span class="personal-info__value">España</span>
+                                </div>
                             </li>
 
                             <li class="personal-info__option">
-
-                                <span class="personal-info__title">Dirección</span>
-                                <span class="personal-info__value">Calle hermanos velasco López,
-                                    Torrelodones</span>
+                                <i class="personal-info__icon fa-solid fa-location-dot"></i>
+                                <div>
+                                    <span class="personal-info__title">Dirección</span>
+                                    <span class="personal-info__value">Torrelodones, Madrid</span>
+                                </div>
                             </li>
 
                             <li class="personal-info__option">
-
-                                <span class="personal-info__title">Correo electrónico</span>
-                                1995igna@gmail.com
+                                <i class="personal-info__icon fa-solid fa-envelope"></i>
+                                <div>
+                                    <span class="personal-info__title">Correo electrónico</span>
+                                    <span class="personal-info__value">1995igna@gmail.com</span>
+                                </div>
                             </li>
 
                             <li class="personal-info__option">
-
-                                <span class="personal-info__title">Teléfono de contacto</span>
-                                <span class="personal-info__value">684304919</span>
+                                <i class="personal-info__icon fa-solid fa-phone"></i>
+                                <div>
+                                    <span class="personal-info__title">Teléfono</span>
+                                    <span class="personal-info__value">+34 684 304 919</span>
+                                </div>
                             </li>
-
-
-
 
                         </ul>
-
-
 
                     </div>
 
@@ -277,20 +285,43 @@
                     </header>
 
                    <div class="services__container">
-  <!-- 1 · Frontend & Animaciones -->
+
+  <!-- 1 Frontend & Animaciones -->
   <article class="services__service">
     <div class="service__icon" aria-hidden="true">
       <i class="service__real-icon fa-solid fa-code"></i>
     </div>
     <div class="service__content">
-      <h3 class="service__title">Frontend & Animaciones</h3>
+      <h3 class="service__title">Frontend &amp; Animaciones</h3>
       <p class="service__description">
-        Interfaces modernas y responsivas con microinteracciones que suman: HTML, CSS, JS (Vite/React), Framer Motion/GSAP.
+        Interfaces modernas y responsivas con JavaScript vanilla (ES6+) o React/Vite.
+        Microinteracciones, transiciones fluidas y c&oacute;digo limpio &mdash; sin dependencias innecesarias.
       </p>
+      <div class="service__tags">
+        <span>HTML5/CSS3</span><span>JS Vanilla</span><span>React</span><span>Vite</span>
+      </div>
     </div>
   </article>
 
-  <!-- 2 · UI/UX y Prototipado -->
+  <!-- 2 Backend & Serverless -->
+  <article class="services__service">
+    <div class="service__icon" aria-hidden="true">
+      <i class="service__real-icon fa-solid fa-server"></i>
+    </div>
+    <div class="service__content">
+      <h3 class="service__title">Backend &amp; Serverless</h3>
+      <p class="service__description">
+        APIs REST con Node.js/Express, bases de datos relacionales y NoSQL,
+        y arquitecturas serverless en Firebase y Vercel Functions.
+        Probado en producci&oacute;n con miles de usuarios reales.
+      </p>
+      <div class="service__tags">
+        <span>Node.js</span><span>Firebase</span><span>MySQL</span><span>MongoDB</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3 UI/UX y Prototipado -->
   <article class="services__service">
     <div class="service__icon" aria-hidden="true">
       <i class="service__real-icon fa-solid fa-pen-ruler"></i>
@@ -298,48 +329,66 @@
     <div class="service__content">
       <h3 class="service__title">UI/UX y Prototipado</h3>
       <p class="service__description">
-        Experiencias centradas en el usuario: wireframes, sistemas de diseño, tipografía y coherencia visual en Figma.
+        Dise&ntilde;o centrado en el usuario: wireframes, sistemas de dise&ntilde;o, tipograf&iacute;a y coherencia visual.
+        Del boceto en Figma a la implementaci&oacute;n real &mdash; sin perder el detalle.
       </p>
+      <div class="service__tags">
+        <span>Figma</span><span>Design Systems</span><span>WCAG</span><span>Responsive</span>
+      </div>
     </div>
   </article>
 
-<article class="services__service">
-  <div class="service__icon" aria-hidden="true">
-    <i class="service__real-icon fa-solid fa-robot"></i>
-  </div>
-  <div class="service__content">
-    <h3 class="service__title">Integración de APIs e IA</h3>
-    <p class="service__description">
-      Desarrollo proyectos propios donde integro APIs e inteligencia artificial para crear experiencias interactivas y personalizadas.
-      Un ejemplo es <strong>Workout Torrelodones</strong>, mi proyecto personal de entrenamiento con un chatbot diseñado e implementado por mí.
-    </p>
-    <a href="https://workout-project-vn2h.vercel.app/" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       class="service__logo-link">
-      <img src="assets/img/banner-enlace.png" 
-           alt="Logo Workout Torrelodones" 
-           class="service__logo">
-    </a>
-  </div>
-</article>
-
-
-
-
-
-  <!-- 4 · Deploy y Optimización -->
+  <!-- 4 SaaS & Producto Digital -->
   <article class="services__service">
     <div class="service__icon" aria-hidden="true">
-      <i class="service__real-icon fa-solid fa-rocket"></i>
+      <i class="service__real-icon fa-solid fa-cubes"></i>
     </div>
     <div class="service__content">
-      <h3 class="service__title">Deploy y Optimización</h3>
+      <h3 class="service__title">SaaS &amp; Producto Digital</h3>
       <p class="service__description">
-        Vercel/Netlify, accesibilidad, SEO técnico y performance. Entrego rápido y medible.
+        Construyo productos completos de principio a fin: arquitectura, billing, m&eacute;tricas y despliegue.
+        Fund&eacute; <strong>Libreos.app</strong>, un SaaS en producci&oacute;n con modelo freemium, Stripe y +3.000 visitas/mes org&aacute;nicas.
       </p>
+      <div class="service__tags">
+        <span>Stripe</span><span>Freemium</span><span>Vercel</span><span>Firebase</span>
+      </div>
     </div>
   </article>
+
+  <!-- 5 IA & Automatizacion -->
+  <article class="services__service">
+    <div class="service__icon" aria-hidden="true">
+      <i class="service__real-icon fa-solid fa-robot"></i>
+    </div>
+    <div class="service__content">
+      <h3 class="service__title">IA &amp; Automatizaci&oacute;n</h3>
+      <p class="service__description">
+        Integraci&oacute;n de modelos de lenguaje (GPT-4o-mini, OpenAI API) en flujos reales:
+        chatbots, recomendaciones personalizadas y automatizaci&oacute;n de contenido con prompt engineering aplicado.
+      </p>
+      <div class="service__tags">
+        <span>OpenAI API</span><span>GPT-4o-mini</span><span>Chatbots</span><span>Prompt Eng.</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- 6 Mobile & PWA -->
+  <article class="services__service">
+    <div class="service__icon" aria-hidden="true">
+      <i class="service__real-icon fa-solid fa-mobile-screen-button"></i>
+    </div>
+    <div class="service__content">
+      <h3 class="service__title">Mobile &amp; PWA</h3>
+      <p class="service__description">
+        Aplicaciones m&oacute;viles publicadas en Google Play a partir de webs existentes con Capacitor.
+        SEO t&eacute;cnico con pre-renderizado y +10.000 p&aacute;ginas indexadas en producci&oacute;n.
+      </p>
+      <div class="service__tags">
+        <span>Capacitor</span><span>Android</span><span>Google Play</span><span>SEO t&eacute;cnico</span>
+      </div>
+    </div>
+  </article>
+
 </div>
 
 
@@ -391,230 +440,130 @@
 
                <section class="about__price" aria-labelledby="pricing-title">
   <header class="price__header">
-    <h2 id="pricing-title" class="price__title">Tarifas y Servicios</h2>
-
-<section class="launch-packs" aria-label="Ofertas de lanzamiento">
-  <header class="launch-packs__header">
-    <h3>Ofertas de lanzamiento</h3>
-    <p>Plazas limitadas · Entrega rápida · Calidad UI/UX</p>
+    <h2 id="pricing-title" class="price__title">Tarifas</h2>
+    <p class="pricing__subtitle-note">Orientativo &middot; Siempre incluye reuni&oacute;n inicial gratuita</p>
   </header>
 
-  <div class="launch-packs__grid">
-    <!-- Pack 1: Landing 99€ -->
-    <article class="lp-card lp-card--landing" aria-label="Landing en 5 días por 99€">
-      <div class="lp-card__badge">Oferta 99€</div>
-      <h4>Landing page en 5 días</h4>
-      <p class="lp-card__price"><span>99€</span> + IVA</p>
-      <ul class="lp-card__features">
-        <li>1 sección hero + CTA + contacto</li>
-        <li>Responsive y accesibilidad básica</li>
-        <li>Dominio propio o subdominio (opcional)</li>
-        <li>Deploy en Vercel/Netlify incluido</li>
-      </ul>
-      <div class="lp-card__meta">
-        <span>⏱ Entrega: 5 días</span>
-        <span>🎫 5 plazas/mes</span>
+  <div class="pricing__grid">
+
+    <!-- Plan Landing -->
+    <article class="pricing__plan">
+      <div class="pricing__plan-top">
+        <span class="pricing__plan-name">Landing</span>
+        <div class="pricing__plan-price">
+          <span class="pricing__amount">desde 150&euro;</span>
+          <small class="pricing__delivery">+ IVA &middot; entrega 5&ndash;7 d&iacute;as</small>
+        </div>
       </div>
-      <a class="lp-card__cta lp-cta--primary" href="contacto.html#contacto">
-         Quiero mi landing
-      </a>
-      <small class="lp-card__small">
-        *Incluye una ronda de ajustes. Secciones extra: 40€ c/u.
-      </small>
+      <ul class="pricing__features">
+        <li>1&ndash;3 secciones + hero y CTA</li>
+        <li>Dise&ntilde;o responsive y accesible</li>
+        <li>Deploy en Vercel incluido</li>
+        <li>1 ronda de ajustes</li>
+      </ul>
+      <a href="contacto.html" class="pricing__cta">Solicitar presupuesto</a>
     </article>
 
-    <!-- Pack 2: Rediseño UI 150€ -->
-    <article class="lp-card lp-card--redesign" aria-label="Rediseño visual + UI por 150€">
-      <div class="lp-card__badge lp-badge--gold">Promo 150€</div>
-      <h4>Rediseño visual + UI</h4>
-      <p class="lp-card__price"><span>150€</span> + IVA</p>
-      <ul class="lp-card__features">
-        <li>Auditoría rápida de tu web actual</li>
-        <li>Header/hero + tipografía y color system</li>
-        <li>Prototipo en Figma (1 pantalla)</li>
-        <li>Implementación HTML/CSS/JS</li>
-      </ul>
-      <div class="lp-card__meta">
-        <span>⏱ Entrega: 7 días</span>
-        <span>🎫 3 plazas/mes</span>
+    <!-- Plan Web Profesional -->
+    <article class="pricing__plan pricing__plan--featured">
+      <div class="pricing__plan-top">
+        <div class="pricing__plan-name-row">
+          <span class="pricing__plan-name">Web Profesional</span>
+          <span class="pricing__plan-badge">M&aacute;s elegido</span>
+        </div>
+        <div class="pricing__plan-price">
+          <span class="pricing__amount">desde 600&euro;</span>
+          <small class="pricing__delivery">+ IVA &middot; entrega 3&ndash;5 semanas</small>
+        </div>
       </div>
-      <a class="lp-card__cta lp-cta--alt" href="contacto.html#contacto">
-        Quiero un rediseño
-      </a>
-      <small class="lp-card__small">
-        *Incluye una ronda de ajustes. Páginas extra: desde 60€ c/u.
-      </small>
+      <ul class="pricing__features">
+        <li>Multi-p&aacute;gina o SPA (React / Vite)</li>
+        <li>Animaciones y microinteracciones</li>
+        <li>Integraci&oacute;n de APIs b&aacute;sicas</li>
+        <li>SEO t&eacute;cnico + rendimiento</li>
+        <li>2 rondas de ajustes</li>
+      </ul>
+      <a href="contacto.html" class="pricing__cta pricing__cta--primary">Solicitar presupuesto</a>
     </article>
+
+    <!-- Plan Producto Full Stack -->
+    <article class="pricing__plan">
+      <div class="pricing__plan-top">
+        <span class="pricing__plan-name">Producto Full Stack</span>
+        <div class="pricing__plan-price">
+          <span class="pricing__amount">desde 1.500&euro;</span>
+          <small class="pricing__delivery">+ IVA &middot; entrega 6&ndash;10 semanas</small>
+        </div>
+      </div>
+      <ul class="pricing__features">
+        <li>Frontend + Backend serverless</li>
+        <li>IA integrada (OpenAI API)</li>
+        <li>Billing con Stripe &amp; suscripciones</li>
+        <li>Mobile / PWA + Google Play</li>
+        <li>Analytics, SEO y soporte inicial</li>
+      </ul>
+      <a href="contacto.html" class="pricing__cta">Solicitar presupuesto</a>
+    </article>
+
   </div>
+
+  <p class="pricing__note">
+    Los precios son orientativos y var&iacute;an seg&uacute;n el alcance y los plazos.
+    Todos los proyectos comienzan con una <strong>reuni&oacute;n inicial gratuita</strong>.
+  </p>
 </section>
 
 
-
-    <div class="prices__container">
-      <!-- Plan Básico -->
-      <article class="price__box" aria-label="Plan Básico">
-        <div class="price__subtitle">
-          <span class="prices__text">Básico</span>
-        </div>
-
-        <div class="prices__price">
-          <span class="prices__number">desde 300€</span>
-          <small class="prices__advice">Proyecto único</small>
-        </div>
-
-        <ul class="prices__features">
-          <li class="prices__reward">Landing 1–3 secciones</li>
-          <li class="prices__reward">Diseño responsive + accesibilidad básica</li>
-          <li class="prices__reward">Entrega en 1–2 semanas</li>
-          <li class="prices__reward">Deploy en Vercel/Netlify</li>
-        </ul>
-
-        <div class="prices__buy">
-          <a href="contacto.html#contacto" class="prices__btn" aria-label="Solicitar presupuesto plan básico">
-            Solicitar presupuesto
-          </a>
-        </div>
-      </article>
-
-      <!-- Plan Avanzado -->
-      <article class="price__box price__box--featured" aria-label="Plan Avanzado">
-        <div class="price__subtitle">
-          <span class="prices__text">Avanzado</span>
-          <span class="prices__badge" aria-hidden="true">Más elegido</span>
-        </div>
-
-        <div class="prices__price">
-          <span class="prices__number">desde 600€</span>
-          <small class="prices__advice">Web/app frontend</small>
-        </div>
-
-        <ul class="prices__features">
-          <li class="prices__reward">Multipágina o SPA (React/Vite)</li>
-          <li class="prices__reward">Animaciones y microinteracciones (Framer/GSAP)</li>
-          <li class="prices__reward">Integración de APIs básicas</li>
-          <li class="prices__reward">SEO técnico + rendimiento</li>
-          <li class="prices__reward">Entrega 3–5 semanas</li>
-        </ul>
-
-        <div class="prices__buy">
-          <a href="contacto.html#contacto" class="prices__btn prices__btn--primary" aria-label="Solicitar presupuesto plan avanzado">
-            Solicitar presupuesto
-          </a>
-        </div>
-      </article>
-
-      <!-- Plan Premium -->
-      <article class="price__box" aria-label="Plan Premium">
-        <div class="price__subtitle">
-          <span class="prices__text">Premium</span>
-        </div>
-
-        <div class="prices__price">
-          <span class="prices__number">desde 1000€</span>
-          <small class="prices__advice">Producto completo</small>
-        </div>
-
-        <ul class="prices__features">
-          <li class="prices__reward">Research ligero + UI/UX en Figma</li>
-          <li class="prices__reward">Frontend + Integración de APIs/IA</li>
-          <li class="prices__reward">Branding básico y sistema de diseño</li>
-          <li class="prices__reward">Analytics + handoff y soporte inicial</li>
-          <li class="prices__reward">Entrega 5–8 semanas</li>
-        </ul>
-
-        <div class="prices__buy">
-          <a href="contacto.html#contacto" class="prices__btn" aria-label="Solicitar presupuesto plan premium">
-            Solicitar presupuesto
-          </a>
-        </div>
-      </article>
-    </div>
-  </header>
-</section>
-
-
-<section class="about__price-note" aria-labelledby="price-note-title">
-  <div class="price-note__container">
-    <h4 id="price-note-title" class="price-note__title">Precios orientativos</h4>
-    <p class="price-note__text">
-      Las tarifas mostradas son aproximadas y pueden variar según el alcance, la complejidad y los plazos del proyecto.
-      Todos los presupuestos incluyen una reunión inicial gratuita para definir requisitos y ajustar el coste final.
-    </p>
-  </div>
-</section>
-
-<!-- SVG SPRITE (una sola vez en la página) -->
+<!-- SVG SPRITE -->
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
   <defs>
     <linearGradient id="grad-brand" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#5ca6c4"/>
-      <stop offset="100%" stop-color="#5ca6c4"/>
+      <stop offset="0%" stop-color="#c4956a"/>
+      <stop offset="100%" stop-color="#a07a52"/>
     </linearGradient>
-
-    <!-- Rayo: entregas rápidas -->
-    <symbol id="icon-bolt" viewBox="0 0 24 24">
-      <path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z" fill="url(#grad-brand)"/>
-    </symbol>
-
-    <!-- Pincel/Regla: UI centrado en usuario -->
-    <symbol id="icon-ux" viewBox="0 0 24 24">
-      <path d="M3 4h10v6H3zM3 12h10v8H3z" fill="none" stroke="url(#grad-brand)" stroke-width="2" stroke-linejoin="round"/>
-      <path d="M17 3l4 4m0-4-4 4" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round"/>
-    </symbol>
-
-    <!-- Handshake: comunicación -->
-    <symbol id="icon-handshake" viewBox="0 0 24 24">
-      <path d="M7 12l3 3a3 3 0 004 0l3-3M2 12l5-5 5 5M22 12l-5-5-5 5" fill="none" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-
-    <!-- Grafica: resultados -->
-    <symbol id="icon-chart" viewBox="0 0 24 24">
-      <path d="M3 20h18" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round"/>
-      <path d="M6 16v-4M12 16V8M18 16v-6" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round"/>
-    </symbol>
-
-    <!-- Llave inglesa: stack -->
-    <symbol id="icon-tools" viewBox="0 0 24 24">
-      <path d="M15 3a5 5 0 00-4 8.66L5 18l1 1 6-6A5 5 0 1015 3z" fill="none" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-
-    <!-- Bombilla: proyectos reales / IA -->
-    <symbol id="icon-bulb" viewBox="0 0 24 24">
-      <path d="M9 18h6M9 21h6" stroke="url(#grad-brand)" stroke-width="2" stroke-linecap="round"/>
-      <path d="M12 3a6 6 0 00-4 10c1.5 1.3 2 2.5 2 3h4c0-1 0.5-1.7 2-3a6 6 0 00-4-10z" fill="none" stroke="url(#grad-brand)" stroke-width="2"/>
-    </symbol>
   </defs>
 </svg>
 
 <section class="about__highlights" aria-labelledby="highlights-title">
   <header class="highlights__header">
-    <h2 id="highlights-title">Lo más <span class="title__color">destacado</span></h2>
+    <h2 id="highlights-title">Lo m&aacute;s <span class="title__color">destacado</span></h2>
   </header>
 
-  <div class="highlights__container">
-    <div class="highlight__item">
-      <svg class="highlight__icon" role="img" aria-label="Entregas rápidas"><use href="#icon-bolt"/></svg>
-      <span>Entregas rápidas y optimizadas</span>
+  <div class="highlights__stats">
+    <div class="hl-stat">
+      <span class="hl-stat__number">+10k</span>
+      <span class="hl-stat__label">p&aacute;ginas SEO indexadas en producci&oacute;n</span>
     </div>
-    <div class="highlight__item">
-      <svg class="highlight__icon" role="img" aria-label="Diseño centrado en el usuario"><use href="#icon-ux"/></svg>
-      <span>Diseño centrado en el usuario</span>
+    <div class="hl-stat">
+      <span class="hl-stat__number">+3k</span>
+      <span class="hl-stat__label">visitas org&aacute;nicas / mes en Libreos.app</span>
     </div>
-    <div class="highlight__item">
-      <svg class="highlight__icon" role="img" aria-label="Comunicación clara"><use href="#icon-handshake"/></svg>
-      <span>Comunicación clara y fluida</span>
+    <div class="hl-stat">
+      <span class="hl-stat__number">&ndash;30%</span>
+      <span class="hl-stat__label">tiempo de carga mejorado en SkyLink Global</span>
     </div>
-    <div class="highlight__item">
-      <svg class="highlight__icon" role="img" aria-label="Resultados medibles"><use href="#icon-chart"/></svg>
-      <span>Resultados medibles</span>
+    <div class="hl-stat">
+      <span class="hl-stat__number">5</span>
+      <span class="hl-stat__label">d&iacute;as para entregar una landing lista</span>
     </div>
-    <div class="highlight__item">
-      <svg class="highlight__icon" role="img" aria-label="Stack moderno"><use href="#icon-tools"/></svg>
-      <span>Stack moderno y versátil</span>
+  </div>
+
+  <div class="highlights__props">
+    <div class="hl-prop">
+      <i class="hl-prop__icon fa-solid fa-layer-group"></i>
+      <span>SaaS en producci&oacute;n &mdash; Stripe + Firebase + Vercel</span>
     </div>
-    <div class="highlight__item">
-      <svg class="highlight__icon" role="img" aria-label="Experiencia real"><use href="#icon-bulb"/></svg>
-      <span>Experiencia real en proyectos (APIs e IA)</span>
+    <div class="hl-prop">
+      <i class="hl-prop__icon fa-brands fa-google-play"></i>
+      <span>App publicada en Google Play con Capacitor</span>
+    </div>
+    <div class="hl-prop">
+      <i class="hl-prop__icon fa-solid fa-robot"></i>
+      <span>IA real integrada en producto (GPT-4o-mini)</span>
+    </div>
+    <div class="hl-prop">
+      <i class="hl-prop__icon fa-solid fa-code"></i>
+      <span>Full Stack end-to-end &mdash; del dise&ntilde;o al servidor</span>
     </div>
   </div>
 </section>

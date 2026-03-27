@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="assets/css/scroll.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <script src="assets/js/menu.js" defer></script>
+    <script src='assets/js/menu.js' defer></script>
+    <script src='assets/js/cv-download.js' defer></script>
     <script src="assets/js/portfolio.js"></script>
 </head>
 
@@ -95,14 +96,6 @@
                             </a>
                         </li>
 
-                        <li class="menu__option">
-
-                            <a href="blog.html" class="menu__link ">
-
-                                <i class="fa-solid fa-book menu__icon"></i>
-                                <span class="menu__overlay">Blog</span>
-                            </a>
-                        </li>
 
                         <li class="menu__option">
 
@@ -155,9 +148,7 @@
 
                 <div class="user-info__buttons">
 
-                    <a href="assets/cv/CVIgnacioSuarez.pdf" class="user-info__btn" download="CVIgnacioSuarez.pdf">
-  Descargar CV
-</a>
+                    <button class="user-info__btn" onclick="openCvPopup()">Descargar CV</button>
 
 
 
@@ -169,7 +160,7 @@
 
                 <footer class="user-info__footer">
 
-                    &copy; 2025 Ignacio Suarez Ruiz
+                    &copy; 2026 Ignacio Suarez Ruiz
 
 
                 </footer>
@@ -211,220 +202,190 @@
 
                 </header>
 
-                <nav class="portfolio__navbar">
 
-<ul class="portfolio__menu">
-  <li class="portfolio__option portfolio__option--active" data-filter="all">
-    <a href="#" class="portfolio__link">Todo</a>
-  </li>
-  <li class="portfolio__option" data-filter="personal">
-    <a href="#" class="portfolio__link">Proyecto personal</a>
-  </li>
-  <li class="portfolio__option" data-filter="dam">
-    <a href="#" class="portfolio__link">Proyecto DAM</a>
-  </li>
-</ul>
+               <!-- ── Flagship: Libreos.app ── -->
+<div class="pf-flagship">
+  <div class="pf-flagship__inner">
 
-
-
-
-                </nav>
-
-               <section class="portfolio__gallery">
-
-  <!-- Proyecto personal -->
-  <figure class="gallery__item" data-category="personal">
-    <div class="gallery__container-image">
-      <a href="https://workout-project-vn2h.vercel.app/"
-         class="gallery__link" target="_blank" rel="noopener noreferrer">
-        <img src="assets/img/banner-enlace.png" class="gallery__image"/> 
-      </a>
+    <div class="pf-flagship__meta">
+      <span class="pf-flagship__badge"><span class="pf-badge__dot"></span>En producción</span>
+      <span class="pf-flagship__type">Proyecto insignia</span>
     </div>
-    <figcaption class="gallery__title">Workout Torrelodones</figcaption>
-    <span class="gallery__category">Proyecto personal</span>
-  </figure>
 
-  
+    <div class="pf-flagship__body">
+      <div class="pf-flagship__left">
+        <img src="assets/img/logo.webp" alt="Libreos.app" class="pf-flagship__logo">
+        <p class="pf-flagship__desc">Plataforma SaaS de descubrimiento literario en español. JavaScript vanilla en producción real, sin frameworks.</p>
 
-<figure class="gallery__item" data-category="personal">
-  <div class="gallery__container-image">
-    <a href="https://libros-app-vay6.vercel.app/"
-       class="gallery__link" target="_blank" rel="noopener noreferrer">
-      <img src="assets/img/libros.png" class="gallery__image"/> 
-    </a>
+        <div class="pf-flagship__stats">
+          <div class="pf-stat"><span class="pf-stat__n">+3.000</span><span class="pf-stat__l">visitas / mes</span></div>
+          <div class="pf-stat"><span class="pf-stat__n">+10.000</span><span class="pf-stat__l">obras indexadas</span></div>
+          <div class="pf-stat"><span class="pf-stat__n">Android</span><span class="pf-stat__l">Google Play</span></div>
+          <div class="pf-stat"><span class="pf-stat__n">Freemium</span><span class="pf-stat__l">Stripe + Play Billing</span></div>
+        </div>
+
+        <div class="pf-flagship__actions">
+          <button class="pf-flagship__cta case-study-btn libros" data-modal="librosModal">Ver caso de estudio</button>
+          <a href="https://libreos.app/" class="pf-flagship__ghost" target="_blank" rel="noopener">libreos.app ↗</a>
+        </div>
+
+        <a href="https://play.google.com/store/apps/details?id=com.libreos.app"
+           class="pf-play-badge" target="_blank" rel="noopener" aria-label="Descargar en Google Play">
+          <span class="pf-play-badge__shine"></span>
+          <i class="fa-brands fa-google-play pf-play-badge__icon"></i>
+          <div class="pf-play-badge__text">
+            <span class="pf-play-badge__sub">Disponible en</span>
+            <span class="pf-play-badge__title">Google Play</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="pf-flagship__right">
+        <img src="assets/img/logo.webp" alt="" aria-hidden="true" class="pf-flagship__visual">
+      </div>
+    </div>
+
   </div>
-  <figcaption class="gallery__title">LibrOs.app</figcaption>
-  <span class="gallery__category">Proyecto personal</span>
-
-  <!-- Botón minimalista -->
-<button class="case-study-btn libros" data-modal="librosModal">Ver caso de estudio</button>
-
+</div>
 
 <!-- Modal LibrOs.app -->
 <div id="librosModal" class="modal-overlay" aria-hidden="true">
   <div class="modal-content">
     <button class="modal-close" aria-label="Cerrar">✕</button>
     
-    <h2 class="modal-title">Caso de estudio: LibrOs.app</h2>
-    <p class="modal-subtitle">Recomendador literario con APIs externas y diseño UI/UX editorial</p>
-    
-<div class="cs">
-  <p class="cs-kicker">Proyecto personal · Producto vivo · v1</p>
-  <h3>Qué es LibrOs.app</h3>
-  <p>
-    Un recomendador de libros que une <strong>APIs </strong> ,
-    <strong>UI/UX editorial</strong> y pequeñas dosis de IA para generar sinopsis y mejorar la
-    exploración. Objetivo: que el lector encuentre “ese” libro sin perderse en ruido.
-  </p>
+    <h2 class=”modal-title”>Caso de estudio: Libreos.app</h2>
+    <p class=”modal-subtitle”>Plataforma de descubrimiento y recomendación de libros en español — en producción con usuarios reales</p>
 
-  <div class="cs-tags">
-    <span class="cs-tag">Frontend puro (HTML/CSS/JS)</span>
-    <span class="cs-tag">Firebase Auth (Google)</span>
-    <span class="cs-tag">Google Books · Wikipedia</span>
-    <span class="cs-tag">Vercel</span>
-    <span class="cs-tag">UX first · Accesibilidad AA</span>
+<div class=”cs”>
+  <p class=”cs-kicker”>Producto vivo · Freemium · Web + Android</p>
+
+  <h3>El problema</h3>
+  <p>Los lectores en español carecen de una herramienta nativa que combine descubrimiento personalizado, acceso a literatura clásica y rutas de lectura curadas, sin depender de plataformas genéricas en inglés con recomendaciones poco contextualizadas.</p>
+
+  <h3>La solución</h3>
+  <p>Una SPA en <strong>JavaScript vanilla</strong> con motor de recomendaciones semántico por estado de ánimo, chat de IA conversacional, lector de clásicos integrado y más de 200 listas y rutas literarias pre-renderizadas para SEO. Disponible en web y como app nativa Android.</p>
+
+  <div class=”cs-tags”>
+    <span class=”cs-tag”>JavaScript ES Modules (vanilla)</span>
+    <span class=”cs-tag”>Firebase · Firestore · Auth</span>
+    <span class=”cs-tag”>Vercel Edge Functions</span>
+    <span class=”cs-tag”>OpenAI GPT-4o-mini</span>
+    <span class=”cs-tag”>Stripe + Google Play Billing</span>
+    <span class=”cs-tag”>Capacitor 7 · Android</span>
+    <span class=”cs-tag”>Google Books · Wikipedia API</span>
+    <span class=”cs-tag”>SEO-first · Freemium</span>
   </div>
 
-  <h3>Reto</h3>
-  <p>
-    Convertir un listado infinito en una <em>experiencia curada</em>: menos scroll, más intención.
-    Poner el foco en la <strong>decisión</strong> (¿qué leo ahora?) y no en la fricción
-    (formularios, filtros rotos, portadas feo-pixeladas).
-  </p>
+  <h3>Stack tecnológico</h3>
+  <table class=”cs-table”>
+    <thead><tr><th>Capa</th><th>Tecnología</th></tr></thead>
+    <tbody>
+      <tr><td>Frontend</td><td>JavaScript ES Modules (vanilla, sin frameworks)</td></tr>
+      <tr><td>Serverless API</td><td>Vercel Edge Functions</td></tr>
+      <tr><td>Cloud Functions</td><td>Firebase (TypeScript, Node 20)</td></tr>
+      <tr><td>Base de datos</td><td>Firebase Firestore</td></tr>
+      <tr><td>Autenticación</td><td>Firebase Auth (email + Google OAuth)</td></tr>
+      <tr><td>IA</td><td>OpenAI GPT-4o-mini</td></tr>
+      <tr><td>Pagos web</td><td>Stripe (checkout + customer portal)</td></tr>
+      <tr><td>Pagos Android</td><td>Google Play Billing v3</td></tr>
+      <tr><td>Email</td><td>Brevo (secuencias de nurturing)</td></tr>
+      <tr><td>Mobile</td><td>Capacitor 7 (WebView nativo)</td></tr>
+      <tr><td>Deploy</td><td>Vercel + Firebase Hosting + Google Play Store</td></tr>
+    </tbody>
+  </table>
 
-  <h3>Solución (en una frase)</h3>
-  <p>
-    <strong>Chips de intención</strong> (género · estado de ánimo · longitud) + búsqueda de texto + ficha
-    elegante con <strong>sinopsis generada</strong>, <strong>bio del autor</strong> y portadas
-    limpias, todo en un flujo <strong>una sola pantalla</strong>.
-  </p>
 
-  <!-- Mockups -->
-  
-  <div class="cs-grid">
-  
-    <figure class="cs-fig">
-      <img src="assets/mockups/libros/chips-intent.png" alt="Chips de intención para filtrar por género, mood y longitud">
-      <figcaption>Chips de intención: el usuario decide <em>cómo quiere leer</em>.</figcaption>
-    </figure>
+  <h3>Arquitectura multi-superficie</h3>
+  <p>Un único repositorio despliega simultáneamente en tres superficies: <strong>Vercel</strong> (archivos estáticos + funciones serverless), <strong>Firebase Hosting</strong> (con rewrites y Cloud Functions) y <strong>Android</strong> (los mismos assets HTML/CSS/JS envueltos en WebView via Capacitor).</p>
+  <p>JavaScript vanilla a escala, con módulos desacoplados y responsabilidades claras: estado global, motor de renderizado DOM, clientes de API, chat IA, motor de recomendaciones, autenticación y billing como capas independientes.</p>
 
- <figure class="cs-fig">
-      <img src="assets/mockups/libros/result-chip.png" alt="Chips de intención para filtrar por género, mood y longitud">
-      <figcaption>Se muestran los resultados <em>a partir de los chips seleccionados mostrándose portada premium del libro en cuestión</em>.</figcaption>
-    </figure>
-
-    <figure class="cs-fig">
-      <img src="assets/mockups/libros/book-modal.png" alt="Modal de libro con sinopsis, ratings y CTA">
-      <figcaption>Una vez buscado el libro, se muestra un modal con sinopsis, ratings y CTA claro.</figcaption>
-    </figure>
-    <figure class="cs-fig">
-      <img src="assets/mockups/libros/author-bio.png" alt="Bloque de biografía del autor con glass-card y toggle">
-      <figcaption>En dicho modal, se muestra la bio del autor y todas sus obras .</figcaption>
-    </figure>
-  </div>
-
-  <h3>Arquitectura & módulos</h3>
-  <pre class="cs-code"><code>
-/js
-  ├─ state.js          // estado global (selecciones, libro actual, historial)
-  ├─ config.js         // constantes: GENRES, MOODS, LENGTH, endpoints
-  ├─ helpers.js        // utilidades DOM ($, $all) + formateos
-  ├─ render.js         // pintado de resultados, ficha actual, guardados, modal
-  ├─ chips.js          // montaje de chips + monoselección
-  ├─ textSearch.js     // búsqueda libre por título/autor/tema
-  ├─ api.js            // Google Books + Wikipedia + generación de sinopsis
-  ├─ quotes.js         // tarjeta de citas destacadas
-  ├─ reco.js           // lógica de recomendación basada en chips
-  ├─ author-toggle.js  // abrir/cerrar bio extendida
-  └─ main.js           // orquestación de eventos y flujo
-  </code></pre>
-
-  <h3>Decisiones de diseño</h3>
-  <ul class="cs-list">
-    <li><strong>Tipografía</strong>: Cormorant Garamond para títulos (alma editorial), sans-serif limpia para cuerpo.</li>
-    <li><strong>Paleta</strong>: bronces y cálidos con sombras suaves; sensación “biblioteca moderna”.</li>
-    <li><strong>Micro-interacciones</strong>: hover sutil, modales con <em>blur</em>, estrellas 0–10, chips con feedback instantáneo.</li>
-    <li><strong>Portadas</strong>: prioridad a calidad → placeholders elegantes si falta imagen.</li>
+  <h3>Funcionalidades principales</h3>
+  <ul class=”cs-list”>
+    <li><strong>Motor de recomendaciones semántico</strong>: 6 estados de ánimo mapeados a clusters de tags, cruzados con más de 55 géneros en 5 niveles taxonómicos. Genera texto contextual personalizado para cada recomendación.</li>
+    <li><strong>LibrAI — Chat con IA</strong>: chatbot powered por GPT-4o-mini con personalidad literaria (evocador, culto, sin buzzwords), memoria de conversación y switching de contexto en tiempo real.</li>
+    <li><strong>Lector de clásicos integrado</strong>: más de 132 obras de dominio público procesadas con pipeline de normalización propio. Temas claro/oscuro/sepia, ajuste tipográfico y navegación por capítulos.</li>
+    <li><strong>Billing multiplataforma</strong>: Stripe en web, Google Play Billing en Android. La misma lógica freemium corre en ambas superficies sin condicionales en la capa de features.</li>
+    <li><strong>Estado premium en tiempo real</strong>: propagación vía custom events a todos los módulos suscritos. Sin polling. Sin Redux. Propagación en milisegundos.</li>
+    <li><strong>SEO engineering</strong>: 200+ listas y 50+ rutas pre-renderizadas como HTML estático. Sitemap dinámico actualizado por Cloud Scheduler. URLs estables como canal principal de adquisición orgánica.</li>
   </ul>
 
-  <h3>Funcionalidades clave</h3>
-  <ul class="cs-list">
-    <li>Autenticación con Google (Firebase) para favoritos y progreso.</li>
-    <li>Recomendación por chips (género/mood/longitud) + búsqueda manual.</li>
-    <li>Sinopsis generada con IA , bio del autor, y todas las obras relacionadas sin salir de la app.</li>
-    <li>Trending con “cortina” y con portadas estilizadas.</li>
-    <li>Bloques glass-card (autor) y modal con accesibilidad (teclas, focus-trap).</li>
+  <h3>Modelo de negocio</h3>
+  <table class=”cs-table”>
+    <thead><tr><th>Feature</th><th>Gratis</th><th>Premium</th></tr></thead>
+    <tbody>
+      <tr><td>Búsqueda y descubrimiento</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Lector de clásicos (132+)</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Listas y rutas literarias</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Chat LibrAI</td><td>❌</td><td>✅</td></tr>
+      <tr><td>Listas personalizadas</td><td>❌</td><td>✅</td></tr>
+      <tr><td>Rutas de lectura secuenciales</td><td>❌</td><td>✅</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Decisiones técnicas destacadas</h3>
+  <ul class=”cs-list”>
+    <li><strong>Vanilla JS como principio</strong>: sin overhead de framework, archivos servidos directamente al browser, control total sobre rendering y estado. Demuestra que se puede construir un producto complejo sin abstracciones innecesarias.</li>
+    <li><strong>SEO-first architecture</strong>: las URLs son “sagradas”. Las páginas pre-renderizadas son el canal principal de adquisición orgánica; ningún cambio de URL sin análisis de impacto.</li>
+    <li><strong>Onboarding personalizado</strong>: cuestionario de 5 pantallas (mood / género / ritmo) antes de la primera recomendación, diseñado para reducir el time-to-value al mínimo.</li>
+    <li><strong>Integridad de fuentes literarias</strong>: disciplina explícita en el codebase sobre el uso exclusivo de fuentes primarias para citas (Wikisource ES, Cervantes Virtual, BNE) — decisión de producto no trivial frente a las alucinaciones de LLMs.</li>
   </ul>
 
-  <h3>Accesibilidad & rendimiento</h3>
-  <ul class="cs-list">
-    <li>Modal accesible: <code>aria-hidden</code>, etiquetas y cierre por <kbd>Esc</kbd>.</li>
-    <li>Lazy-loading de imágenes y caché de respuestas API .</li>
-    <li>Contraste testeado a nivel AA; tamaños fluidos con <code>clamp()</code>.</li>
+  <h3>Lo que demuestra este proyecto</h3>
+  <ul class=”cs-list”>
+    <li>Arquitectura disciplinada sin frameworks — JavaScript a escala en producción real</li>
+    <li>Fullstack completo: SPA + serverless APIs + Cloud Functions + mobile nativo</li>
+    <li>Billing multiplataforma con verificación server-side (Stripe + Google Play)</li>
+    <li>SEO engineering: pre-rendering, sitemaps dinámicos, URLs estables como canal de negocio</li>
+    <li>IA aplicada: chatbot con personalidad literaria + motor semántico de recomendaciones</li>
+    <li>Producto en producción con usuarios reales, no un proyecto de demo</li>
   </ul>
 
-  <h3>Retos & soluciones</h3>
-  <ul class="cs-list">
-    <li><strong>Datos irregulares</strong> (portadas/ratings): normalización + placeholders de marca en caso de no obtener portadas oficiales</li>
-    <li><strong>Texto largo</strong> (bios/sinopsis): colapsado con toggle y lectura cómoda  para mayor comodidad</li>
-    <li><strong>Monolito → modular</strong>: separación por responsabilidades para escalar sin dolor.</li>
-  </ul>
-
-  <h3>Aprendizajes</h3>
-  <p>
-    Diseñar primero la <strong>decisión</strong> y después la interfaz. Menos “features”, más
-    <em>flow</em> claro. Y documentarlo: la narrativa del producto pesa tanto como el código.
-  </p>
-
-  <h3>Roadmap</h3>
-  <ul class="cs-list">
-    <li>Perfiles con seguimiento de lecturas y favoritos.</li>
-    <li>Más proveedores de datos (ratings consolidados, reseñas limpias).</li>
-    <li>Listas curadas y modo lectura nocturno.</li>
-    <li>Pequeño “club” con recomendaciones semanales.</li>
-  </ul>
-
-  <div class="cs-cta">
-    <a class="cs-btn demo" href="https://libros-app-vay6.vercel.app/" target="_blank" rel="noopener">Ver demo</a>
-    
+  <div class=”cs-cta”>
+    <a class=”cs-btn demo” href=”https://libreos.app/” target=”_blank” rel=”noopener”>Ver demo</a>
   </div>
 </div>
 
   </div>
 </div>
 
+<!-- ── Otros proyectos ── -->
+<div class="pf-others">
+  <p class="pf-others__label">Otros proyectos</p>
+  <div class="pf-others__grid">
 
-</figure>
+    <a href="https://workout-project-vn2h.vercel.app/" class="pf-card" target="_blank" rel="noopener noreferrer">
+      <div class="pf-card__img-wrap">
+        <img src="assets/img/banner-enlace.png" alt="Workout Torrelodones" class="pf-card__img">
+        <div class="pf-card__overlay"></div>
+      </div>
+      <div class="pf-card__info">
+        <span class="pf-card__tag">Proyecto personal</span>
+        <h3 class="pf-card__title">Workout Torrelodones</h3>
+      </div>
+    </a>
 
+    <a href="https://github.com/ignnaaroans95/billar3dunity?tab=readme-ov-file" class="pf-card" target="_blank" rel="noopener noreferrer">
+      <div class="pf-card__img-wrap">
+        <img src="assets/img/billard.png" alt="Proyecto Billar en Unity" class="pf-card__img">
+        <div class="pf-card__overlay"></div>
+      </div>
+      <div class="pf-card__info">
+        <span class="pf-card__tag">Proyecto DAM</span>
+        <h3 class="pf-card__title">Proyecto Billar en Unity</h3>
+      </div>
+    </a>
 
-
-
-  <!-- Proyecto DAM -->
-  <figure class="gallery__item" data-category="dam">
-    <div class="gallery__container-image">
-      <a href="https://github.com/ignnaaroans95/billar3dunity?tab=readme-ov-file"
-         class="gallery__link" target="_blank" rel="noopener noreferrer">
-        <!-- Imagen base -->
-        <img src="assets/img/billard.png" alt="Billard Unity" class="gallery__image" />
-        <!-- Imagen que se muestra al hover -->
-        <img src="assets/img/billard-hover.png" alt="Detalle billar" class="gallery__image--hover" />
-      </a>
-    </div>
-    <figcaption class="gallery__title">Proyecto Billar en Unity</figcaption>
-    <img src="assets/img/unity.svg" alt="Unity" class="gallery__icon">
-    <span class="gallery__category">Proyecto DAM</span>
-  </figure>
-
-  
-
-</section>
+  </div>
+</div>
 
 <!-- Timeline integrado -->
 <div class="portfolio__timeline">
-  <h2 class="portfolio__timeline-title">Línea temporal · 2025</h2>
+  <h2 class="portfolio__timeline-title">Línea temporal · 2025 – 2026</h2>
 
+  <!-- ── 2025 ── -->
+  <div class="tl-year-label">2025</div>
   <div class="tl-header">
-    <div class="tl-col-label">Proyecto</div>
+    <div class="tl-col-label"></div>
     <div class="tl-months" aria-hidden="true">
       <span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span>
       <span>May</span><span>Jun</span><span>Jul</span><span>Ago</span>
@@ -432,53 +393,77 @@
     </div>
   </div>
 
-  <!-- Workout -->
   <div class="tl-row" data-start="2025-01" data-end="2025-09">
     <div class="tl-col-label">
       <strong>Workout Torrelodones</strong>
-      <div class="tl-meta">Web real · Deploy Vercel</div>
+      <div class="tl-meta">Web · Deploy Vercel</div>
     </div>
     <div class="tl-track">
       <div class="tl-bar" style="--color: var(--bar-a);">
-        <span class="tl-badge tl-badge--progress" data-tooltip="Online, mejoras continuas">
-          ⏳ En producción
-        </span>
+        <span class="tl-badge tl-badge--progress" data-tooltip="Online, mejoras continuas">⏳ En producción</span>
       </div>
     </div>
   </div>
 
-  <!-- Billar Unity (mayo–junio) -->
   <div class="tl-row" data-start="2025-05" data-end="2025-06">
     <div class="tl-col-label">
-      <strong>Proyecto Billar en Unity</strong>
+      <strong>Billar en Unity</strong>
       <div class="tl-meta">Física · Arte propio</div>
     </div>
     <div class="tl-track">
       <div class="tl-bar" style="--color: var(--bar-b);">
-        <span class="tl-badge tl-badge--done" data-tooltip="MVP jugable completado">
-          ✅ Finalizado
-        </span>
+        <span class="tl-badge tl-badge--done" data-tooltip="MVP jugable completado">✅ Finalizado</span>
       </div>
     </div>
   </div>
 
-    <!-- LibrOs.app (febrero–septiembre) -->
-  <div class="tl-row" data-start="2025-07" data-end="2025-09">
+  <div class="tl-row" data-start="2025-02" data-end="2025-12">
     <div class="tl-col-label">
-      <strong>LibrOs.app</strong>
-      <div class="tl-meta">Recomendador de libros · Firebase + APIs</div>
+      <div class="tl-label-logo">
+        <img src="assets/img/logo.webp" alt="Libreos.app" class="tl-logo-img">
+        <a href="https://play.google.com/store/apps/details?id=com.libreos.app"
+           target="_blank" rel="noopener" class="tl-store-link" aria-label="Ver en Google Play">
+          <i class="fa-brands fa-google-play"></i>
+        </a>
+      </div>
+      <div class="tl-meta">Firebase + Vercel · Android</div>
     </div>
     <div class="tl-track">
       <div class="tl-bar" style="--color: var(--bar-c);">
-        <span class="tl-badge tl-badge--progress" data-tooltip="Beta pública en Vercel">
-           Beta activa
-        </span>
+        <span class="tl-badge tl-badge--progress" data-tooltip="En producción con usuarios reales">🚀 En producción</span>
       </div>
     </div>
   </div>
 
+  <!-- ── 2026 ── -->
+  <div class="tl-year-label tl-year-label--2026">2026</div>
+  <div class="tl-header">
+    <div class="tl-col-label"></div>
+    <div class="tl-months" aria-hidden="true">
+      <span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span>
+      <span>May</span><span>Jun</span><span>Jul</span><span>Ago</span>
+      <span>Sep</span><span>Oct</span><span>Nov</span><span>Dic</span>
+    </div>
+  </div>
 
-  
+  <div class="tl-row" data-start="2026-01" data-end="2026-04">
+    <div class="tl-col-label">
+      <div class="tl-label-logo">
+        <img src="assets/img/logo.webp" alt="Libreos.app" class="tl-logo-img">
+        <a href="https://play.google.com/store/apps/details?id=com.libreos.app"
+           target="_blank" rel="noopener" class="tl-store-link" aria-label="Ver en Google Play">
+          <i class="fa-brands fa-google-play"></i>
+        </a>
+      </div>
+      <div class="tl-meta">Firebase + Vercel · Android</div>
+    </div>
+    <div class="tl-track">
+      <div class="tl-bar" style="--color: var(--bar-c);">
+        <span class="tl-badge tl-badge--progress" data-tooltip="Activo · última actualización Abr 2026">🚀 En producción</span>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 <link rel="stylesheet" href="assets/css/loader.css">
 
-<script src="assets/js/menu.js" defer></script>
+<script src='assets/js/menu.js' defer></script>
+    <script src='assets/js/cv-download.js' defer></script>
 
 
 </head>
@@ -96,14 +97,6 @@
                             </a>
                         </li>
 
-                        <li class="menu__option">
-
-                            <a href="blog.html" class="menu__link">
-
-                                <i class="fa-solid fa-book menu__icon"></i>
-                                <span class="menu__overlay">Blog</span>
-                            </a>
-                        </li>
 
                         <li class="menu__option">
 
@@ -156,9 +149,7 @@
 
                 <div class="user-info__buttons">
 
-                    <a href="assets/cv/CVIgnacioSuarez.pdf" class="user-info__btn" download="CVIgnacioSuarez.pdf">
-  Descargar CV
-</a>
+                    <button class="user-info__btn" onclick="openCvPopup()">Descargar CV</button>
 
 
 
@@ -170,7 +161,7 @@
 
                 <footer class="user-info__footer">
 
-                    &copy; 2025 Ignacio Suarez Ruiz
+                    &copy; 2026 Ignacio Suarez Ruiz
 
 
                 </footer>
@@ -208,36 +199,48 @@
 
   <div class="contact__container">
 
-    <!-- Tarjetas metálicas -->
+    <!-- Info -->
     <section class="contact__info">
 
-      <div class="contact__data metal-card">
+      <div class="contact__data">
         <i class="contact__icon fa-solid fa-location-dot"></i>
-        <h2 class="contact__subtitle">Madrid</h2>
+        <div>
+          <p class="contact__label">Ubicación</p>
+          <h2 class="contact__subtitle">Torrelodones, Madrid</h2>
+        </div>
       </div>
 
-      <div class="contact__data metal-card">
+      <div class="contact__data">
         <i class="contact__icon fa-solid fa-phone"></i>
-        <h2 class="contact__subtitle">684304919</h2>
+        <div>
+          <p class="contact__label">Teléfono</p>
+          <h2 class="contact__subtitle">+34 684 304 919</h2>
+        </div>
       </div>
 
-      <div class="contact__data metal-card">
+      <div class="contact__data">
         <i class="contact__icon fa-solid fa-envelope"></i>
-        <h2 class="contact__subtitle">1995igna@gmail.com</h2>
+        <div>
+          <p class="contact__label">Email</p>
+          <h2 class="contact__subtitle">1995igna@gmail.com</h2>
+        </div>
       </div>
 
-      <div class="contact__data metal-card">
+      <div class="contact__data">
         <i class="contact__icon fa-solid fa-code"></i>
-        <h2 class="contact__subtitle">Desarrollador</h2>
+        <div>
+          <p class="contact__label">Especialidad</p>
+          <h2 class="contact__subtitle">Full Stack Developer</h2>
+        </div>
       </div>
 
     </section>
 
-    <!-- Formulario con panel metálico -->
-    <section class="contact__form-box metal-panel">
+    <!-- Formulario -->
+    <section class="contact__form-box">
 
       <header class="contact__form-header">
-        <h3 class="contact-header__title">¿Cómo  puedo <span class="subtitle__color">Ayudarte?</span></h3>
+        <h3 class="contact-header__title">¿Cómo puedo <span class="subtitle__color">ayudarte?</span></h3>
       </header>
 
       <!-- Mapa con bordes difuminados -->

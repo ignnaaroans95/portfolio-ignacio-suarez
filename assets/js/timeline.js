@@ -9,10 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     bar.style.setProperty('--start', start);
     bar.style.setProperty('--span', span);
 
-    // Línea de hoy (si el año es 2025)
+    // Línea de hoy (si el año del row coincide con el actual)
     const track = row.querySelector('.tl-track');
     const now = new Date();
-    if (now.getFullYear() === 2025 && track && !track.querySelector('.tl-today')){
+    const rowYear = parseInt(row.dataset.start.split('-')[0], 10);
+    if (rowYear === now.getFullYear() && track && !track.querySelector('.tl-today')){
       const today = document.createElement('div');
       today.className = 'tl-today';
       today.style.setProperty('--today-col', now.getMonth()+1);

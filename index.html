@@ -4,28 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Portafolio-Ignacio Suárez</title>
+    <title>Ignacio Su&aacute;rez | Desarrollador Full Stack</title>
+    <meta name="description" content="Portfolio de Ignacio Su&aacute;rez, desarrollador Full Stack especializado en frontend, backend, IA y aplicaciones m&oacute;viles.">
   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:ital,wght@1,100&display=swap"
-        rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <!--Estilos-->
-        <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
-         <link rel="stylesheet" href="assets/css/reset.css"/>
-         <link rel="stylesheet" href="assets/css/styles.css"/>
-         <link rel="stylesheet" href="assets/fonts/poppins/poppins.css">
-         <link rel="stylesheet" href="assets/css/scroll.css">
-         <link rel="stylesheet" href="assets/css/responsive.css">
+    <!--Estilos-->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/scroll.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
          <!--Script JS-->
+<script src='assets/js/sidebar.js' defer></script>
 <script src='assets/js/menu.js' defer></script>
     <script src='assets/js/cv-download.js' defer></script>
+    <script src='assets/js/animations.js' defer></script>
+    <script src='assets/js/stories.js' defer></script>
 
 </head>
 
 <body>
+
+<a class="skip-link" href="#main-content">Ir al contenido</a>
 
 <!--Layout principal-->
 
@@ -33,148 +37,12 @@
 
 <!--Barra lateral (info del usuario)-->
 
-<aside class=" layout__aside ">
-
-<section class="aside__user-info">
-
-<!--Informacion general del usuario-->
-
-<div class="user-info__general">
-
-<div class="user-info__container-image" >
-
-    <img src="assets/img/fotoigna.jpg" alt="Foto de perfil del usuario" class="user-info__image" width="200.51" height="200.75">
-
-</div>
-
-<h2 class="user-info__name">Ignacio Suarez</h2>
-
-<h4 class="user-info__job">UI . UX | Desarrollador FrontEnd</h4>
-
-
-</div>
-
-<!--Menu de navegacion-->
-
-<nav class="layout__menu">
-
-<ul class="menu__list">
-
-<li class="menu__option">
-
-<a href="index.html" class="menu__link menu__link--active">
-
-<i class="fa-solid fa-house menu__icon"></i>
-<span class="menu__overlay">Home</span>
-</a></li>
-
-<li class="menu__option">
-
-    <a href="sobre-mi.html" class="menu__link">
-    
-    <i class="fa-solid fa-user menu__icon"></i>
-    <span class="menu__overlay">Sobre mí</span>
-    </a></li>
-
-    <li class="menu__option">
-
-        <a href="curriculum.html" class="menu__link">
-        
-        <i class="fa-solid fa-graduation-cap menu__icon"></i>
-        <span class="menu__overlay">Curriculum</span>
-        </a></li>
-
-        <li class="menu__option">
-
-            <a href="portafolio.html" class="menu__link">
-            
-            <i class="fa-solid fa-briefcase menu__icon"></i>
-            <span class="menu__overlay">Portafolio</span>
-            </a></li>
-
-
-                <li class="menu__option">
-
-                    <a href="contacto.html" class="menu__link">
-                    
-                    <i class="fa-solid fa-envelope menu__icon"></i>
-                    <span class="menu__overlay">Contacto</span>
-                    </a></li>
-
-
-
-
-</ul>
-
-
-
-</nav>
-
-<!--Link a  redes sociales-->
-
-<div class="user-info__links">
-
-<ul class="links__social">
-
-
-
-<li class="social__option">
-
-    <a href="https://www.linkedin.com/in/ignacio-su%C3%A1rez-ruiz-94105630a/" class="social__link">
-    <i class="social__icon fa-brands fa-linkedin"></i>
-    
-    </a>
-    
-    </li>
-
-    
-                        <li class="social__option">
-
-                            <a href="https://github.com/ignnaaroans95/ignnaaroans95" class="social__link">
-                                <i class="social__icon fa-brands fa-github"></i>
-
-                            </a>
-
-                        </li>
-    </ul>
-
-</div>
-
-<!--Botón del CV-->
-
-<div class="user-info__buttons">
-
-<button class="user-info__btn" onclick="openCvPopup()">Descargar CV</button>
-
-
-
-</div>
-
-
-
-<!--Pie de página-->
-
-<footer class="user-info__footer">
-
-&copy; 2026 Ignacio Suarez Ruiz
-
-
-</footer>
-
-
-
-</section>
-
-
-
-
-
-</aside>
+<aside data-sidebar data-active="home"></aside>
 
 <!--Menu Responsive-->
 
 
-<div class="layout__menu-toggle">
+<div class="layout__menu-toggle" role="button" aria-expanded="false" aria-label="Abrir menú" tabindex="0">
 
 <i class="menu-toggle__icon fa-solid fa-bars"></i>
 <i class="menu-toggle__icon fa-solid fa-xmark"></i>
@@ -183,36 +51,134 @@
 
 <!--Contenido principal--->
 
-<main class="layout__content">
+<main class="layout__content" id="main-content">
 
-<section class="content__page">
+<section class="content__page content__hero">
 
-<h1 class="page__name">Ignacio Suárez</h1>
-<h2 class="page__job">Desarrollador Full Stack</h2>
+<h1 class="page__name" data-animate>Ignacio Su&aacute;rez</h1>
+<h2 class="page__job" data-animate data-delay="80">Desarrollador Full Stack</h2>
 
-<div class="hero-divider" aria-hidden="true"></div>
+<p class="hero__pitch" data-animate data-delay="160">
+  Construyo productos digitales completos &mdash; desde la arquitectura hasta el deploy.
+  <strong>JavaScript, Node.js, Firebase, IA (OpenAI)</strong> y apps Android publicadas en Google Play.
+</p>
 
-<div class="hero-cta" role="region" aria-label="Contratación freelance">
+<div class="hero-sep" aria-hidden="true" data-animate data-delay="220">
+  <span class="hero-sep__line"></span>
+  <span class="hero-sep__diamond"></span>
+  <span class="hero-sep__line"></span>
+</div>
+
+<!-- Hitos clave — interactivos -->
+<div class="hero-milestones">
+
+  <button class="hero-milestone" data-animate data-delay="260" data-story="seo" type="button">
+    <span class="hero-milestone__icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+    <div class="hero-milestone__text">
+      <strong>+10.000 p&aacute;gs indexadas</strong>
+      <span>SEO-first &middot; +3k visitas/mes</span>
+    </div>
+    <span class="hero-milestone__expand" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+  </button>
+
+  <button class="hero-milestone" data-animate data-delay="320" data-story="billing" type="button">
+    <span class="hero-milestone__icon"><i class="fa-solid fa-credit-card" aria-hidden="true"></i></span>
+    <div class="hero-milestone__text">
+      <strong>Billing multiplataforma</strong>
+      <span>Stripe + Google Play Billing</span>
+    </div>
+    <span class="hero-milestone__expand" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+  </button>
+
+  <button class="hero-milestone" data-animate data-delay="380" data-story="ia" type="button">
+    <span class="hero-milestone__icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></span>
+    <div class="hero-milestone__text">
+      <strong>IA en producci&oacute;n</strong>
+      <span>GPT-4o-mini &middot; Chatbot + rec.</span>
+    </div>
+    <span class="hero-milestone__expand" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+  </button>
+
+  <button class="hero-milestone" data-animate data-delay="440" data-story="mobile" type="button">
+    <span class="hero-milestone__icon"><i class="fa-brands fa-google-play" aria-hidden="true"></i></span>
+    <div class="hero-milestone__text">
+      <strong>App nativa Android</strong>
+      <span>Capacitor 7 &middot; Google Play</span>
+    </div>
+    <span class="hero-milestone__expand" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+  </button>
+
+</div>
+
+<!-- Producto en producción -->
+<div class="hero-product" data-animate data-delay="500">
+  <p class="hero-product__label">Producto en producci&oacute;n</p>
+  <div class="hero-product__links">
+    <a href="https://libreos.app/" target="_blank" rel="noopener" class="hero-product__link hero-product__web" aria-label="Visitar Libreos.app">
+      <img src="assets/img/logo.webp" alt="Libreos.app" class="hero-product__logo" width="140" height="40">
+      <span class="hero-product__visit">Visitar web <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.libreos.app" target="_blank" rel="noopener" class="hero-product__link hero-product__store" aria-label="Descargar en Google Play">
+      <i class="fa-brands fa-google-play hero-product__store-icon" aria-hidden="true"></i>
+      <div class="hero-product__store-text">
+        <span class="hero-product__store-pre">Disponible en</span>
+        <span class="hero-product__store-name">Google Play</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="hero-sep hero-sep--sm" aria-hidden="true">
+  <span class="hero-sep__line"></span>
+  <span class="hero-sep__diamond"></span>
+  <span class="hero-sep__line"></span>
+</div>
+
+<!-- CTA contacto -->
+<div class="hero-cta" role="region" aria-label="Contrataci&oacute;n freelance" data-animate data-delay="560">
   <p class="cta-sub">
     <span class="cta-available">
       <span class="cta-dot" aria-hidden="true"></span>
       Disponible para proyectos
     </span>
-    <span class="cta-mini">Frontend &middot; Backend &middot; IA &middot; Mobile</span>
   </p>
-  <div class="cta-buttons">
+  <div class="cta-buttons cta-buttons--row">
     <a class="btn-cta btn-primary btn-whatsapp"
        href="https://wa.me/34684304919?text=Hola%20Ignacio%2C%20vengo%20de%20tu%20portfolio%20y%20me%20interesa%20hablar%20sobre%20un%20proyecto."
        target="_blank" rel="noopener"
-       aria-label="Escríbeme por WhatsApp">
+       aria-label="Escr&iacute;beme por WhatsApp">
       <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Hablemos
     </a>
-    <a class="btn-cta btn-ghost" href="./sobre-mi.html" aria-label="Ver servicios">Servicios y tarifas</a>
-    <a class="btn-cta btn-alt" href="./portafolio.html" aria-label="Ver proyectos">Proyectos</a>
+    <a class="btn-cta btn-outline" href="./portafolio.html" aria-label="Ver caso de estudio">
+      Ver caso de estudio
+    </a>
   </div>
 </div>
 
-
+<!-- Story Modal (Engineering Post-Mortem) -->
+<div class="story-overlay" id="storyOverlay" aria-hidden="true">
+  <div class="story-modal" role="dialog" aria-labelledby="storyTitle">
+    <button class="story-modal__close" aria-label="Cerrar" type="button">&times;</button>
+    <div class="story-modal__header">
+      <span class="story-modal__icon" id="storyIcon"></span>
+      <h3 class="story-modal__title" id="storyTitle"></h3>
+    </div>
+    <div class="story-modal__body">
+      <div class="story-phase">
+        <span class="story-phase__tag story-phase__tag--challenge">Desaf&iacute;o</span>
+        <p class="story-phase__text" id="storyChallenge"></p>
+      </div>
+      <div class="story-phase">
+        <span class="story-phase__tag story-phase__tag--solution">Soluci&oacute;n</span>
+        <p class="story-phase__text" id="storySolution"></p>
+      </div>
+      <div class="story-phase">
+        <span class="story-phase__tag story-phase__tag--result">Resultado</span>
+        <p class="story-phase__text" id="storyResult"></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 </section>
 

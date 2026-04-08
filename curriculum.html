@@ -4,179 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Portafolio-Ignacio Suárez</title>
+    <title>Curriculum &mdash; Ignacio Su&aacute;rez | Desarrollador Full Stack</title>
+    <meta name="description" content="Formaci&oacute;n acad&eacute;mica y experiencia profesional de Ignacio Su&aacute;rez como desarrollador Full Stack.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:ital,wght@1,100&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!--Estilos-->
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css">
     <link rel="stylesheet" href="assets/css/scroll.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+    <script src='assets/js/sidebar.js' defer></script>
     <script src='assets/js/menu.js' defer></script>
     <script src='assets/js/cv-download.js' defer></script>
+    <script src='assets/js/animations.js' defer></script>
 </head>
 
 <body>
+
+<a class="skip-link" href="#main-content">Ir al contenido</a>
 
     <!--Layout principal-->
 
     <div class="layout">
 
-        <!--Barra lateral (info del usuario)-->
-
-        <aside class="layout__aside">
-
-            <section class="aside__user-info">
-
-                <!--Informacion general del usuario-->
-
-                <div class="user-info__general">
-
-                    <div class="user-info__container-image">
-
-                        <img src="assets/img/fotoigna.jpg" alt="Foto de perfil del usuario" class="user-info__image" width="200.51" height="200.75">
-
-                    </div>
-
-                    <h2 class="user-info__name">Ignacio Suarez</h2>
-
-                    <h4 class="user-info__job">UI . UX | Desarrollador FrontEnd</h4>
-
-
-                </div>
-
-                <!--Menu de navegacion-->
-
-                <nav class="layout__menu">
-
-                    <ul class="menu__list">
-
-                        <li class="menu__option">
-
-                            <a href="index.html" class="menu__link " >
-
-                                <i class="fa-solid fa-house menu__icon"></i>
-                                <span class="menu__overlay">Home</span>
-                            </a>
-                        </li>
-
-                        <li class="menu__option">
-
-                            <a href="sobre-mi.html" class="menu__link ">
-
-                                <i class="fa-solid fa-user menu__icon"></i>
-                                <span class="menu__overlay">Sobre mí</span>
-                            </a>
-                        </li>
-
-                        <li class="menu__option">
-
-                            <a href="curriculum.html" class="menu__link menu__link--active ">
-
-                                <i class="fa-solid fa-graduation-cap menu__icon"></i>
-                                <span class="menu__overlay">Curriculum</span>
-                            </a>
-                        </li>
-
-                        <li class="menu__option">
-
-                            <a href="portafolio.html" class="menu__link">
-
-                                <i class="fa-solid fa-briefcase menu__icon"></i>
-                                <span class="menu__overlay">Portafolio</span>
-                            </a>
-                        </li>
-
-
-                        <li class="menu__option">
-
-                            <a href="contacto.html" class="menu__link">
-
-                                <i class="fa-solid fa-envelope menu__icon"></i>
-                                <span class="menu__overlay">Contacto</span>
-                            </a>
-                        </li>
-
-
-
-
-                    </ul>
-
-
-
-                </nav>
-
-                <!--Link a  redes sociales-->
-
-                <div class="user-info__links">
-
-                    <ul class="links__social">
-
-                       
-
-                        <li class="social__option">
-
-                            <a href="https://www.linkedin.com/in/ignacio-su%C3%A1rez-ruiz-94105630a/" class="social__link">
-                                <i class="social__icon fa-brands fa-linkedin"></i>
-
-                            </a>
-
-                        </li>
-
-                      
-                        <li class="social__option">
-
-                            <a href="https://github.com/ignnaaroans95/ignnaaroans95" class="social__link">
-                                <i class="social__icon fa-brands fa-github"></i>
-
-                            </a>
-
-                        </li>
-                    </ul>
-
-                </div>
-
-                <!--Botón del CV-->
-
-                <div class="user-info__buttons">
-
-                    <button class="user-info__btn" onclick="openCvPopup()">Descargar CV</button>
-
-
-
-                </div>
-
-
-
-                <!--Pie de página-->
-
-                <footer class="user-info__footer">
-
-                    &copy; 2026 Ignacio Suarez Ruiz
-
-
-                </footer>
-
-
-
-            </section>
-
-
-
-
-
-        </aside>
+        <aside data-sidebar data-active="curriculum"></aside>
 
         <!--Menu responsive-->
 
-        <div class="layout__menu-toggle">
+        <div class="layout__menu-toggle" role="button" aria-expanded="false" aria-label="Abrir menú" tabindex="0">
 
             <i class="menu-toggle__icon fa-solid fa-bars"></i>
             <i class="menu-toggle__icon fa-solid fa-xmark"></i>
@@ -186,7 +46,7 @@
 
         <!--Contenido principal--->
 
-        <main class="layout__content">
+        <main class="layout__content" id="main-content">
 
             <section class="content__page content__resume">
 
@@ -196,7 +56,7 @@
 
 
 
-                    <h1 class="resume__title">Curriculum</h1>
+                    <h1 class="resume__title" data-animate>Curriculum</h1>
 
 
                 </header>
@@ -207,144 +67,187 @@
 
                     <section class="resume__left">
 
-                        <header class="resume__subheader">
+<!-- ── Formación ── -->
+<header class="resume__subheader">
+  <h2 class="resume__subtitle" data-animate>Formaci&oacute;n</h2>
+</header>
 
-                            <h2 class="resume__subtitle">Formación</h2>
+<div class="cv-cards">
 
-                        </header>
+  <article class="cv-card" data-animate data-delay="80">
+    <header class="cv-card__header">
+      <div class="cv-card__logo">
+        <img src="assets/img/logo-pro2fp.png" alt="PRO2FP" width="80" height="40" loading="lazy">
+      </div>
+      <div class="cv-card__meta">
+        <span class="cv-card__org">PRO2FP &mdash; La Otra FP, Las Rozas</span>
+        <span class="cv-card__date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2023 &ndash; 2025</span>
+      </div>
+    </header>
+    <div class="cv-card__body">
+      <h3 class="cv-card__role">Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
+      <p class="cv-card__desc">Formaci&oacute;n integral en programaci&oacute;n, dise&ntilde;o y despliegue de aplicaciones para web, m&oacute;vil y escritorio.</p>
 
-                        <div class="resume__timeline">
-
-                            <div class="resume__timelines">
-
-
-  <article class="timelines__timeline">
-  <header class="timeline__header">
-    <h4 class="timeline__year">2023 - 2025</h4>
-    <div class="timeline__logo">
-      <img src="assets/img/logo-pro2fp.png" alt="PRO2FP - La Otra FP, Las Rozas" />
+      <div class="cv-chips">
+        <span class="cv-chips__label">Lenguajes</span>
+        <div class="cv-chips__row">
+          <span class="cv-chip">Java</span>
+          <span class="cv-chip">JavaScript</span>
+          <span class="cv-chip">HTML</span>
+          <span class="cv-chip">CSS</span>
+          <span class="cv-chip">SQL</span>
+        </div>
+      </div>
+      <div class="cv-chips">
+        <span class="cv-chips__label">Bases de datos</span>
+        <div class="cv-chips__row">
+          <span class="cv-chip">MySQL</span>
+          <span class="cv-chip">MongoDB</span>
+          <span class="cv-chip">JPA/Hibernate</span>
+        </div>
+      </div>
+      <div class="cv-chips">
+        <span class="cv-chips__label">Web &amp; Frameworks</span>
+        <div class="cv-chips__row">
+          <span class="cv-chip">React</span>
+          <span class="cv-chip">Vite</span>
+          <span class="cv-chip">TailwindCSS</span>
+          <span class="cv-chip">APIs REST</span>
+        </div>
+      </div>
+      <div class="cv-chips">
+        <span class="cv-chips__label">Herramientas</span>
+        <div class="cv-chips__row">
+          <span class="cv-chip">Git</span>
+          <span class="cv-chip">GitHub</span>
+          <span class="cv-chip">Java Swing</span>
+          <span class="cv-chip">JasperReports</span>
+        </div>
+      </div>
     </div>
-    <span class="timeline__company">PRO2FP - La Otra FP, Las Rozas (Madrid)</span>
-  </header>
+  </article>
 
-  <div class="timeline__divider"></div>
+</div>
 
-  <div class="timeline__description">
-    <h3 class="timeline__title">Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
-    <p class="timeline__text">
-      Formación integral en programación, diseño y despliegue de aplicaciones para web, móvil y escritorio.
-    </p>
-    <ul>
-      <li><strong>Lenguajes:</strong> Java, JavaScript, HTML, CSS, SQL, XML, JSON</li>
-      <li><strong>Bases de datos:</strong> MySQL, MongoDB, JPA/Hibernate</li>
-      <li><strong>Web:</strong> React, Vite, TailwindCSS, APIs REST, despliegue en la nube</li>
-      <li><strong>Escritorio & Reporting:</strong> Java Swing, JasperReports</li>
-      <li><strong>Arquitectura:</strong> POO, MVC, buenas prácticas</li>
-      <li><strong>Herramientas:</strong> Git, GitHub, ChatGPT, CoPilot</li>
-    </ul>
+<!-- ── Experiencia ── -->
+<header class="resume__subheader">
+  <h2 class="resume__subtitle" data-animate data-delay="160">Experiencia</h2>
+</header>
 
-    
-  </div>
+<div class="cv-cards">
 
-</article>
+  <article class="cv-card" data-animate data-delay="240">
+    <header class="cv-card__header">
+      <div class="cv-card__logo">
+        <img src="assets/img/logo-skylink.png" alt="SkyLink Global" width="80" height="40" loading="lazy">
+      </div>
+      <div class="cv-card__meta">
+        <span class="cv-card__org">SkyLink Global</span>
+        <span class="cv-card__date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2024 &ndash; 2025</span>
+      </div>
+    </header>
+    <div class="cv-card__body">
+      <h3 class="cv-card__role">Desarrollador Frontend <span class="cv-card__badge">Pr&aacute;cticas</span></h3>
+      <p class="cv-card__desc">Desarrollo y mantenimiento de aplicaciones web internas con Java, HTML5, CSS3 y JavaScript (ES6+) dentro del ecosistema de SkyLink Global.</p>
 
+      <div class="cv-chips">
+        <span class="cv-chips__label">Tech Stack</span>
+        <div class="cv-chips__row">
+          <span class="cv-chip">Java</span>
+          <span class="cv-chip">HTML5</span>
+          <span class="cv-chip">CSS3</span>
+          <span class="cv-chip">JavaScript ES6+</span>
+          <span class="cv-chip">Git</span>
+          <span class="cv-chip">Scrum</span>
+        </div>
+      </div>
 
-
-                            
-
-
-
-                            </div>
-
-
-
-
-                        </div>
-
-                        <header class="resume__subheader">
-
-                            <h2 class="resume__subtitle">Experiencia</h2>
-
-                            <div class="resume__timeline">
-
-                                <div class="resume__timelines">
-    
-    
-<article class="timelines__timeline">
-  <header class="timeline__header">
-    <h4 class="timeline__year">2024 – 2025</h4>
-
-    <div class="timeline__logo">
-      <img src="assets/img/logo-skylink.png" alt="SkyLink Global" />
+      <div class="cv-achievements">
+        <div class="cv-achievement">
+          <span class="cv-achievement__icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span>
+          <p class="cv-achievement__text"><strong>+30 %</strong> velocidad de carga mediante optimizaci&oacute;n de assets</p>
+        </div>
+        <div class="cv-achievement">
+          <span class="cv-achievement__icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+          <p class="cv-achievement__text"><strong>&minus;25 %</strong> deuda t&eacute;cnica, mayor mantenibilidad del c&oacute;digo</p>
+        </div>
+        <div class="cv-achievement">
+          <span class="cv-achievement__icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
+          <p class="cv-achievement__text"><strong>&minus;20 %</strong> tiempos de entrega con metodolog&iacute;as &aacute;giles</p>
+        </div>
+      </div>
     </div>
-    <span class="timeline__company">SkyLink Global</span>
-  </header>
+  </article>
 
-  <div class="timeline__divider"></div>
+  <article class="cv-card cv-card--featured" data-animate data-delay="320">
+    <div class="cv-card__accent" aria-hidden="true"></div>
+    <header class="cv-card__header">
+      <div class="cv-card__logo">
+        <img src="assets/img/logo.webp" alt="Libreos.app" width="80" height="40" loading="lazy">
+      </div>
+      <div class="cv-card__meta">
+        <span class="cv-card__org">Libreos.app</span>
+        <span class="cv-card__date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2025 &ndash; Presente</span>
+      </div>
+      <span class="cv-card__live-badge"><span class="cv-card__live-dot"></span> En producci&oacute;n</span>
+    </header>
+    <div class="cv-card__body">
+      <h3 class="cv-card__role">Fundador &amp; Desarrollador Full Stack</h3>
+      <p class="cv-card__desc">Dise&ntilde;o, desarrollo y operaci&oacute;n de un SaaS en producci&oacute;n para gesti&oacute;n de librer&iacute;as, construido &iacute;ntegramente en JavaScript vanilla sin frameworks.</p>
 
-  <div class="timeline__description">
-    <h3 class="timeline__title">Desarrollador Frontend (Prácticas)</h3>
+      <div class="cv-chips">
+        <span class="cv-chips__label">Frontend</span>
+        <div class="cv-chips__row">
+          <span class="cv-chip">JavaScript ES6+</span>
+          <span class="cv-chip">HTML5</span>
+          <span class="cv-chip">CSS3</span>
+          <span class="cv-chip">Capacitor 7</span>
+        </div>
+      </div>
+      <div class="cv-chips">
+        <span class="cv-chips__label">Backend &amp; Cloud</span>
+        <div class="cv-chips__row">
+          <span class="cv-chip">Node.js</span>
+          <span class="cv-chip">Firebase</span>
+          <span class="cv-chip">Vercel</span>
+          <span class="cv-chip">Stripe</span>
+        </div>
+      </div>
+      <div class="cv-chips">
+        <span class="cv-chips__label">IA &amp; Producto</span>
+        <div class="cv-chips__row">
+          <span class="cv-chip">GPT-4o-mini</span>
+          <span class="cv-chip">Google Play</span>
+          <span class="cv-chip">SEO</span>
+        </div>
+      </div>
 
-    <p class="timeline__text">
-      Desarrollo y mantenimiento de aplicaciones web internas con <strong>Java, HTML5, CSS3 y JavaScript (ES6+)</strong> dentro del ecosistema de Skylink Global.
-    </p>
-
-    <ul class="timeline__list">
-      <li>Mejora de velocidad de carga en un <strong>30 %</strong> mediante optimización de assets y refactorización de componentes críticos.</li>
-      <li>Reducción de deuda técnica en un <strong>25 %</strong> aumentando la mantenibilidad del código.</li>
-      <li>Control de versiones con <strong>Git</strong> y metodologías ágiles (Scrum), reduciendo tiempos de entrega en un 20 %.</li>
-      <li>Revisiones de código y documentación técnica, garantizando calidad y consistencia en todas las entregas.</li>
-    </ul>
-  </div>
-</article>
-
-<article class="timelines__timeline">
-  <header class="timeline__header">
-    <h4 class="timeline__year">2025 – Presente</h4>
-    <div class="timeline__logo">
-      <img src="assets/img/logo.webp" alt="Libreos.app" />
+      <div class="cv-achievements">
+        <div class="cv-achievement">
+          <span class="cv-achievement__icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+          <p class="cv-achievement__text"><strong>+10.000</strong> obras indexadas con pre-renderizado SEO</p>
+        </div>
+        <div class="cv-achievement">
+          <span class="cv-achievement__icon"><i class="fa-solid fa-credit-card" aria-hidden="true"></i></span>
+          <p class="cv-achievement__text"><strong>Billing dual</strong> Stripe web + Google Play Android</p>
+        </div>
+        <div class="cv-achievement">
+          <span class="cv-achievement__icon"><i class="fa-solid fa-users" aria-hidden="true"></i></span>
+          <p class="cv-achievement__text"><strong>+3.000</strong> visitas/mes org&aacute;nicas</p>
+        </div>
+        <div class="cv-achievement">
+          <span class="cv-achievement__icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></span>
+          <p class="cv-achievement__text"><strong>Chat IA</strong> integrado con recomendaciones personalizadas</p>
+        </div>
+      </div>
     </div>
-    <span class="timeline__company">Libreos.app</span>
-  </header>
+  </article>
 
-  <div class="timeline__divider"></div>
-
-  <div class="timeline__description">
-    <h3 class="timeline__title">Fundador & Desarrollador Full Stack</h3>
-
-    <p class="timeline__text">
-      Diseño, desarrollo y operación de un SaaS en producción para gestión de librerías, construido íntegramente en <strong>JavaScript vanilla</strong> sin frameworks.
-    </p>
-
-    <ul class="timeline__list">
-      <li>Arquitectura completa: frontend, backend serverless, base de datos y despliegue en <strong>Vercel + Firebase</strong>.</li>
-      <li>Billing con <strong>Stripe + Google Play</strong> — modelo freemium y suscripciones recurrentes.</li>
-      <li>Chat IA con <strong>GPT-4o-mini</strong> y sistema de pre-renderizado SEO con <strong>+10.000 obras indexadas</strong>.</li>
-      <li>App publicada en <strong>Google Play</strong> con +3.000 visitas/mes orgánicas.</li>
-    </ul>
-  </div>
-</article>
-
-
-                              
-    
-    
-    
-                                </div>
-    
-    
-    
-    
-                            </div>
-
-                        </header>
-
-
-
+</div>
 
                     </section>
 
-                    <section class="resume__right">
+                    <section class="resume__right" data-animate data-delay="150">
 
                         <!-- Habilidades de código -->
 <header class="resume__subheader">
@@ -536,36 +439,26 @@
     <section class="certificates__container">
     
     <article class="certificates__certificate">
-    
-    <div class="certificate__logo">
-    
-        <img src="assets/img/certificado-1.png" class="certificate__image"></div>
-    
-        <div class="certificates__content">
-    
-    
-    <h4 class="certificate__title">Python for Everybody — University of Michigan (Coursera)</h4>
-    <span class="certificate__id">University of Michigan · Coursera</span>
-    <span class="certificate__date">2023</span>
-        </div>
-    
+      <div class="certificate__logo">
+        <img src="assets/img/coursera.png" alt="Coursera" class="certificate__image" width="60" height="60" loading="lazy">
+      </div>
+      <div class="certificates__content">
+        <h4 class="certificate__title">Python for Everybody — University of Michigan</h4>
+        <span class="certificate__id">University of Michigan · Coursera</span>
+        <span class="certificate__date">2023</span>
+      </div>
     </article>
-    
+
     <article class="certificates__certificate">
-    
-        <div class="certificate__logo">
-        
-            <img src="assets/img/certificado-1.png" class="certificate__image"></div>
-        
-            <div class="certificates__content">
-        
-        
-        <h4 class="certificate__title">Máster en CSS:Responsive, SASS, Flexbox, Grid y Bootstrap: +70 ejercicios Nuevo de código</h4>
+      <div class="certificate__logo">
+        <img src="assets/img/udemy.png" alt="Udemy" class="certificate__image" width="60" height="60" loading="lazy">
+      </div>
+      <div class="certificates__content">
+        <h4 class="certificate__title">Máster en CSS: Responsive, SASS, Flexbox, Grid y Bootstrap</h4>
         <span class="certificate__id">ID Verificación UC-b35bb77b-d53d-48ea-8a52-16663a931178</span>
         <span class="certificate__date">24 de Julio de 2023</span>
-            </div>
-        
-        </article>
+      </div>
+    </article>
     
     
     
@@ -575,35 +468,14 @@
     
     
     </div>
-
-</div>
-
-
-
 
                     </section>
 
+                </div>
 
             </section>
 
-
-    </div>
-
-
-    </header>
-
-
-
-    </section>
-
-
-
-
-
-    </main>
-
-
-
+        </main>
 
     </div>
 <a class="fab fab--wa"

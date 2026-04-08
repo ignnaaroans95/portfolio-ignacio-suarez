@@ -4,180 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Portafolio-Ignacio Suárez</title>
+    <title>Portafolio &mdash; Ignacio Su&aacute;rez | Desarrollador Full Stack</title>
+    <meta name="description" content="Proyectos y casos de estudio de Ignacio Su&aacute;rez: aplicaciones web, m&oacute;viles e integraciones con IA.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:ital,wght@1,100&display=swap"rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!--Estilos-->
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css">
     <link rel="stylesheet" href="assets/css/scroll.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+    <script src='assets/js/sidebar.js' defer></script>
     <script src='assets/js/menu.js' defer></script>
     <script src='assets/js/cv-download.js' defer></script>
-    <script src="assets/js/portfolio.js"></script>
+    <script src='assets/js/animations.js' defer></script>
 </head>
 
 <body>
+
+<a class="skip-link" href="#main-content">Ir al contenido</a>
 
     <!--Layout principal-->
 
     <div class="layout">
 
-        <!--Barra lateral (info del usuario)-->
-
-        <aside class="layout__aside">
-
-            <section class="aside__user-info">
-
-                <!--Informacion general del usuario-->
-
-                <div class="user-info__general">
-
-                    <div class="user-info__container-image">
-
-                        <img src="assets/img/fotoigna.jpg" alt="Foto de perfil del usuario" class="user-info__image" width="200.51" height="200.75">
-
-                    </div>
-
-                    <h2 class="user-info__name">Ignacio Suarez</h2>
-
-                    <h4 class="user-info__job">UI . UX | Desarrollador FrontEnd</h4>
-
-
-                </div>
-
-                <!--Menu de navegacion-->
-
-                <nav class="layout__menu">
-
-                    <ul class="menu__list">
-
-                        <li class="menu__option">
-
-                            <a href="index.html" class="menu__link">
-
-                                <i class="fa-solid fa-house menu__icon"></i>
-                                <span class="menu__overlay">Home</span>
-                            </a>
-                        </li>
-
-                        <li class="menu__option">
-
-                            <a href="sobre-mi.html" class="menu__link ">
-
-                                <i class="fa-solid fa-user menu__icon"></i>
-                                <span class="menu__overlay">Sobre mí</span>
-                            </a>
-                        </li>
-
-                        <li class="menu__option">
-
-                            <a href="curriculum.html" class="menu__link">
-
-                                <i class="fa-solid fa-graduation-cap menu__icon"></i>
-                                <span class="menu__overlay">Curriculum</span>
-                            </a>
-                        </li>
-
-                        <li class="menu__option">
-
-                            <a href="portafolio.html" class="menu__link menu__link--active">
-
-                                <i class="fa-solid fa-briefcase menu__icon"></i>
-                                <span class="menu__overlay">Portafolio</span>
-                            </a>
-                        </li>
-
-
-                        <li class="menu__option">
-
-                            <a href="contacto.html" class="menu__link">
-
-                                <i class="fa-solid fa-envelope menu__icon"></i>
-                                <span class="menu__overlay">Contacto</span>
-                            </a>
-                        </li>
-
-
-
-
-                    </ul>
-
-
-
-                </nav>
-
-                <!--Link a  redes sociales-->
-
-                <div class="user-info__links">
-
-                    <ul class="links__social">
-
-                   
-
-                        <li class="social__option">
-
-                            <a href="https://www.linkedin.com/in/ignacio-su%C3%A1rez-ruiz-94105630a/" class="social__link">
-                                <i class="social__icon fa-brands fa-linkedin"></i>
-
-                            </a>
-
-                        </li>
-
-                        <li class="social__option">
-
-                            <a href="https://github.com/ignnaaroans95/ignnaaroans95" class="social__link">
-                                <i class="social__icon fa-brands fa-github"></i>
-
-                            </a>
-
-                        </li>
-                    </ul>
-
-                </div>
-
-                <!--Botón del CV-->
-
-                <div class="user-info__buttons">
-
-                    <button class="user-info__btn" onclick="openCvPopup()">Descargar CV</button>
-
-
-
-                </div>
-
-
-
-                <!--Pie de página-->
-
-                <footer class="user-info__footer">
-
-                    &copy; 2026 Ignacio Suarez Ruiz
-
-
-                </footer>
-
-
-
-            </section>
-
-
-
-
-
-        </aside>
+        <aside data-sidebar data-active="portfolio"></aside>
 
         <!--Menu responsive-->
 
-        <div class="layout__menu-toggle">
+        <div class="layout__menu-toggle" role="button" aria-expanded="false" aria-label="Abrir menú" tabindex="0">
 
             <i class="menu-toggle__icon fa-solid fa-bars"></i>
             <i class="menu-toggle__icon fa-solid fa-xmark"></i>
@@ -187,7 +46,7 @@
 
         <!--Contenido principal--->
 
-        <main class="layout__content">
+        <main class="layout__content" id="main-content">
 
             <section class="content__page content__portfolio">
 
@@ -197,14 +56,14 @@
 
 
 
-                    <h1 class="portfolio__title">Portafolio</h1>
+                    <h1 class="portfolio__title" data-animate>Portafolio</h1>
 
 
                 </header>
 
 
                <!-- ── Flagship: Libreos.app ── -->
-<div class="pf-flagship">
+<div class="pf-flagship" data-animate data-delay="100">
   <div class="pf-flagship__inner">
 
     <div class="pf-flagship__meta">
@@ -214,7 +73,7 @@
 
     <div class="pf-flagship__body">
       <div class="pf-flagship__left">
-        <img src="assets/img/logo.webp" alt="Libreos.app" class="pf-flagship__logo">
+        <img src="assets/img/logo.webp" alt="Libreos.app" class="pf-flagship__logo" width="120" height="34">
         <p class="pf-flagship__desc">Plataforma SaaS de descubrimiento literario en español. JavaScript vanilla en producción real, sin frameworks.</p>
 
         <div class="pf-flagship__stats">
@@ -241,7 +100,7 @@
       </div>
 
       <div class="pf-flagship__right">
-        <img src="assets/img/logo.webp" alt="" aria-hidden="true" class="pf-flagship__visual">
+        <img src="assets/img/logo.webp" alt="" aria-hidden="true" class="pf-flagship__visual" width="200" height="57">
       </div>
     </div>
 
@@ -340,6 +199,54 @@
     <li>Producto en producción con usuarios reales, no un proyecto de demo</li>
   </ul>
 
+  <h3>Desafíos técnicos superados</h3>
+  <div class=”cs-bottlenecks”>
+    <div class=”cs-bottleneck”>
+      <div class=”cs-bottleneck__problem”>
+        <span class=”cs-bottleneck__label”>Problema</span>
+        SEO con SPA vanilla — las SPAs no indexan contenido dinámico
+      </div>
+      <div class=”cs-bottleneck__solution”>
+        <span class=”cs-bottleneck__label”>Solución</span>
+        Pre-renderizado estático de 200+ listas y 50+ rutas como HTML puro servido desde Vercel
+      </div>
+      <div class=”cs-bottleneck__metric”>
+        <span class=”cs-bottleneck__label”>Resultado</span>
+        +10.000 páginas indexadas · Canal orgánico principal de adquisición
+      </div>
+    </div>
+
+    <div class=”cs-bottleneck”>
+      <div class=”cs-bottleneck__problem”>
+        <span class=”cs-bottleneck__label”>Problema</span>
+        Billing multiplataforma — Stripe en web y Google Play en Android con lógica distinta
+      </div>
+      <div class=”cs-bottleneck__solution”>
+        <span class=”cs-bottleneck__label”>Solución</span>
+        Capa de abstracción unificada: verificación server-side agnóstica del proveedor de pago
+      </div>
+      <div class=”cs-bottleneck__metric”>
+        <span class=”cs-bottleneck__label”>Resultado</span>
+        Una sola lógica freemium · Cero condicionales en la capa de features
+      </div>
+    </div>
+
+    <div class=”cs-bottleneck”>
+      <div class=”cs-bottleneck__problem”>
+        <span class=”cs-bottleneck__label”>Problema</span>
+        Rendimiento de carga — assets pesados en conexiones móviles lentas
+      </div>
+      <div class=”cs-bottleneck__solution”>
+        <span class=”cs-bottleneck__label”>Solución</span>
+        Lazy loading agresivo, code splitting por ruta y optimización de assets con SkyLink CDN
+      </div>
+      <div class=”cs-bottleneck__metric”>
+        <span class=”cs-bottleneck__label”>Resultado</span>
+        -30% tiempo de carga · LCP &lt;2s en 3G
+      </div>
+    </div>
+  </div>
+
   <div class=”cs-cta”>
     <a class=”cs-btn demo” href=”https://libreos.app/” target=”_blank” rel=”noopener”>Ver demo</a>
   </div>
@@ -349,13 +256,13 @@
 </div>
 
 <!-- ── Otros proyectos ── -->
-<div class="pf-others">
+<div class="pf-others" data-animate>
   <p class="pf-others__label">Otros proyectos</p>
   <div class="pf-others__grid">
 
     <a href="https://workout-project-vn2h.vercel.app/" class="pf-card" target="_blank" rel="noopener noreferrer">
       <div class="pf-card__img-wrap">
-        <img src="assets/img/banner-enlace.png" alt="Workout Torrelodones" class="pf-card__img">
+        <img src="assets/img/banner-enlace.png" alt="Workout Torrelodones" class="pf-card__img" width="400" height="225" loading="lazy">
         <div class="pf-card__overlay"></div>
       </div>
       <div class="pf-card__info">
@@ -366,7 +273,7 @@
 
     <a href="https://github.com/ignnaaroans95/billar3dunity?tab=readme-ov-file" class="pf-card" target="_blank" rel="noopener noreferrer">
       <div class="pf-card__img-wrap">
-        <img src="assets/img/billard.png" alt="Proyecto Billar en Unity" class="pf-card__img">
+        <img src="assets/img/billard.png" alt="Proyecto Billar en Unity" class="pf-card__img" width="400" height="225" loading="lazy">
         <div class="pf-card__overlay"></div>
       </div>
       <div class="pf-card__info">
@@ -379,7 +286,7 @@
 </div>
 
 <!-- Timeline integrado -->
-<div class="portfolio__timeline">
+<div class="portfolio__timeline" data-animate>
   <h2 class="portfolio__timeline-title">Línea temporal · 2025 – 2026</h2>
 
   <!-- ── 2025 ── -->
@@ -420,7 +327,7 @@
   <div class="tl-row" data-start="2025-02" data-end="2025-12">
     <div class="tl-col-label">
       <div class="tl-label-logo">
-        <img src="assets/img/logo.webp" alt="Libreos.app" class="tl-logo-img">
+        <img src="assets/img/logo.webp" alt="Libreos.app" class="tl-logo-img" width="80" height="23">
         <a href="https://play.google.com/store/apps/details?id=com.libreos.app"
            target="_blank" rel="noopener" class="tl-store-link" aria-label="Ver en Google Play">
           <i class="fa-brands fa-google-play"></i>
@@ -449,7 +356,7 @@
   <div class="tl-row" data-start="2026-01" data-end="2026-04">
     <div class="tl-col-label">
       <div class="tl-label-logo">
-        <img src="assets/img/logo.webp" alt="Libreos.app" class="tl-logo-img">
+        <img src="assets/img/logo.webp" alt="Libreos.app" class="tl-logo-img" width="80" height="23">
         <a href="https://play.google.com/store/apps/details?id=com.libreos.app"
            target="_blank" rel="noopener" class="tl-store-link" aria-label="Ver en Google Play">
           <i class="fa-brands fa-google-play"></i>
@@ -474,38 +381,6 @@
     </div>
 
 
-</div>
-
-
-
-
-            </section>
-
-
-            </section>
-
-
-    </div>
-
-
-    </header>
-
-
-
-    </section>
-
-
-
-
-
-    </main>
-
-
-
-
-    </div>
-
-    
 <a class="fab fab--wa"
    href="https://wa.me/34684304919?text=Hola%20Ignacio%2C%20vengo%20de%20tu%20portfolio%20y%20quiero%20un%20presupuesto."
    target="_blank" rel="noopener"

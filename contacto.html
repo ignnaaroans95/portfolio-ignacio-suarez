@@ -3,183 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,  maximum-scale=1">
-    <title>Portafolio-Ignacio Suárez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Contacto &mdash; Ignacio Su&aacute;rez | Desarrollador Full Stack</title>
+    <meta name="description" content="Contacta con Ignacio Su&aacute;rez para presupuestos de desarrollo web, apps m&oacute;viles e integraciones con IA.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:ital,wght@1,100&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!--Estilos-->
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css">
     <link rel="stylesheet" href="assets/css/scroll.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-<link rel="stylesheet" href="assets/css/loader.css">
-
+<script src='assets/js/sidebar.js' defer></script>
 <script src='assets/js/menu.js' defer></script>
     <script src='assets/js/cv-download.js' defer></script>
-
+    <script src='assets/js/animations.js' defer></script>
+    <script src='assets/js/contact.js' defer></script>
 
 </head>
 
 <body>
 
+<a class="skip-link" href="#main-content">Ir al contenido</a>
+
     <!--Layout principal-->
 
     <div class="layout">
 
-        <!--Barra lateral (info del usuario)-->
-
-        <aside class="layout__aside">
-
-            <section class="aside__user-info">
-
-                <!--Informacion general del usuario-->
-
-                <div class="user-info__general">
-
-                    <div class="user-info__container-image">
-
-                        <img src="assets/img/fotoigna.jpg" alt="Foto de perfil del usuario" class="user-info__image" width="200.51" height="200.75">
-
-                    </div>
-
-                    <h2 class="user-info__name">Ignacio Suarez</h2>
-
-                    <h4 class="user-info__job">UI . UX | Desarrollador FrontEnd</h4>
-
-
-                </div>
-
-                <!--Menu de navegacion-->
-
-                <nav class="layout__menu">
-
-                    <ul class="menu__list">
-
-                        <li class="menu__option">
-
-                            <a href="index.html" class="menu__link">
-
-                                <i class="fa-solid fa-house menu__icon"></i>
-                                <span class="menu__overlay">Home</span>
-                            </a>
-                        </li>
-
-                        <li class="menu__option">
-
-                            <a href="sobre-mi.html" class="menu__link ">
-
-                                <i class="fa-solid fa-user menu__icon"></i>
-                                <span class="menu__overlay">Sobre mí</span>
-                            </a>
-                        </li>
-
-                        <li class="menu__option">
-
-                            <a href="curriculum.html" class="menu__link">
-
-                                <i class="fa-solid fa-graduation-cap menu__icon"></i>
-                                <span class="menu__overlay">Curriculum</span>
-                            </a>
-                        </li>
-
-                        <li class="menu__option">
-
-                            <a href="portafolio.html" class="menu__link">
-
-                                <i class="fa-solid fa-briefcase menu__icon"></i>
-                                <span class="menu__overlay">Portafolio</span>
-                            </a>
-                        </li>
-
-
-                        <li class="menu__option">
-
-                            <a href="contacto.html" class="menu__link menu__link--active">
-
-                                <i class="fa-solid fa-envelope menu__icon"></i>
-                                <span class="menu__overlay">Contacto</span>
-                            </a>
-                        </li>
-
-
-
-
-                    </ul>
-
-
-
-                </nav>
-
-                <!--Link a  redes sociales-->
-
-                <div class="user-info__links">
-
-                    <ul class="links__social">
-
-                  
-                        <li class="social__option">
-
-                            <a href="https://www.linkedin.com/in/ignacio-su%C3%A1rez-ruiz-94105630a/" class="social__link">
-                                <i class="social__icon fa-brands fa-linkedin"></i>
-
-                            </a>
-
-                        </li>
-
-                        
-                        <li class="social__option">
-
-                            <a href="https://github.com/ignnaaroans95/ignnaaroans95" class="social__link">
-                                <i class="social__icon fa-brands fa-github"></i>
-
-                            </a>
-
-                        </li>
-                    </ul>
-
-                </div>
-
-                <!--Botón del CV-->
-
-                <div class="user-info__buttons">
-
-                    <button class="user-info__btn" onclick="openCvPopup()">Descargar CV</button>
-
-
-
-                </div>
-
-
-
-                <!--Pie de página-->
-
-                <footer class="user-info__footer">
-
-                    &copy; 2026 Ignacio Suarez Ruiz
-
-
-                </footer>
-
-
-
-            </section>
-
-
-
-
-
-        </aside>
+        <aside data-sidebar data-active="contact"></aside>
 
 
         <!--Menu responsive-->
 
-        <div class="layout__menu-toggle">
+        <div class="layout__menu-toggle" role="button" aria-expanded="false" aria-label="Abrir menú" tabindex="0">
 
             <i class="menu-toggle__icon fa-solid fa-bars"></i>
             <i class="menu-toggle__icon fa-solid fa-xmark"></i>
@@ -189,12 +48,12 @@
 
         <!--Contenido principal--->
 
-        <main class="layout__content">
+        <main class="layout__content" id="main-content">
 
           <section class="content__page content__contact">
 
   <header class="contact__header">
-    <h1 class="contact__title">Contacto</h1>
+    <h1 class="contact__title" data-animate>Contacto</h1>
   </header>
 
   <div class="contact__container">
@@ -202,7 +61,7 @@
     <!-- Info -->
     <section class="contact__info">
 
-      <div class="contact__data">
+      <div class="contact__data" data-animate data-delay="0">
         <i class="contact__icon fa-solid fa-location-dot"></i>
         <div>
           <p class="contact__label">Ubicación</p>
@@ -210,7 +69,7 @@
         </div>
       </div>
 
-      <div class="contact__data">
+      <div class="contact__data" data-animate data-delay="100">
         <i class="contact__icon fa-solid fa-phone"></i>
         <div>
           <p class="contact__label">Teléfono</p>
@@ -218,7 +77,7 @@
         </div>
       </div>
 
-      <div class="contact__data">
+      <div class="contact__data" data-animate data-delay="200">
         <i class="contact__icon fa-solid fa-envelope"></i>
         <div>
           <p class="contact__label">Email</p>
@@ -226,7 +85,7 @@
         </div>
       </div>
 
-      <div class="contact__data">
+      <div class="contact__data" data-animate data-delay="300">
         <i class="contact__icon fa-solid fa-code"></i>
         <div>
           <p class="contact__label">Especialidad</p>
@@ -251,49 +110,47 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
-      <form class="contact__form">
+      <form class="contact__form" action="https://formspree.io/f/xzdkwakw" method="POST">
+        <input type="hidden" name="_replyto" id="hidden-replyto">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio">
         <div class="form__container">
 
           <section class="form__left">
             <div class="form__group">
-              <input type="text" class="form__input" name="name" required placeholder="Nombre">
-              <label for="name" class="form__label">Nombre</label>
+              <input type="text" class="form__input" id="contact-name" name="name" required placeholder="Nombre" autocomplete="name">
+              <label for="contact-name" class="form__label">Nombre</label>
             </div>
 
             <div class="form__group">
-              <input type="email" class="form__input" name="email" required placeholder="Email">
-              <label for="email" class="form__label">Email</label>
+              <input type="email" class="form__input" id="contact-email" name="email" required placeholder="Email" autocomplete="email">
+              <label for="contact-email" class="form__label">Email</label>
             </div>
 
             <div class="form__group">
-              <input type="text" class="form__input" name="subjet" required placeholder="Asunto">
-              <label for="subjet" class="form__label">Asunto</label>
+              <input type="text" class="form__input" id="contact-subject" name="subject" required placeholder="Asunto">
+              <label for="contact-subject" class="form__label">Asunto</label>
             </div>
           </section>
 
           <section class="form__right">
             <div class="form__group form__group--textarea">
-              <textarea class="form__input form__input--textarea" name="message" required placeholder="Mensaje"></textarea>
-              <label for="message" class="form__label">Mensaje</label>
+              <textarea class="form__input form__input--textarea" id="contact-message" name="message" required placeholder="Mensaje"></textarea>
+              <label for="contact-message" class="form__label">Mensaje</label>
             </div>
           </section>
 
         </div>
-        <input type="submit" class="form__button" value="Enviar Mensaje">
+        <button type="submit" class="form__button">Enviar Mensaje</button>
       </form>
+
+      <!-- Toast notification -->
+      <div class="form__toast" id="formToast" role="status" aria-live="polite"></div>
 
 
 
     </section>
   </div>
 </section>
-
-
-
-    </div>
-    
-
-    </section>
 
 
 
